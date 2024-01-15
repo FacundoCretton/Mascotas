@@ -1,35 +1,40 @@
+// Categoria.js
 import React from "react";
-
 import { useDispatch, useSelector } from "react-redux";
-import { selectCategory } from "../redux/categories/categoriesSlice";
-import { CardCategoria } from "./CategoriasStyles";
+import { selectCategory, selectSubcategory } from "../redux/categories/categoriesSlice";
+import { CardCategoria, SubcategoriasContainer } from "./CategoriasStyles";
 
-export const Categoria = ({name, icon, category}) =>{
+export const Categoria = ({ name, category, subcategories }) => {
+  const dispatch = useDispatch();
+  const selectedCategory = useSelector((state) => state.categories.selectedCategory);
+  const selectedSubcategory = useSelector((state) => state.categories.selectedSubcategory);
 
-    const dispatch = useDispatch();
+  const handleCategoryClick = () => {
+    dispatch(selectCategory(category));
+    dispatch(selectSubcategory(null)); // Reiniciar la subcategoría al cambiar la categoría
+  };
 
-    const selectedCategory = useSelector((state) => state.categories.selectCategory)
+  const handleSubcategoryClick = (subcategory) => {
+    dispatch(selectSubcategory(subcategory));
+  };
 
-    return(
-            <CardCategoria
-
-                selected = {category === selectedCategory}
-                onClick={()=> dispatch (selectCategory(category))}
-            
-            
+  return (
+    <CardCategoria selected={category === selectedCategory} onClick={handleCategoryClick}>
+      <h2>{name}</h2>
+      {/* Mostrar las subcategorías solo si la categoría está seleccionada */}
+      {category === selectedCategory && subcategories && (
+        <SubcategoriasContainer>
+          {subcategories.map((subcategory) => (
+            <div
+              key={subcategory}
+              onClick={() => handleSubcategoryClick(subcategory)}
+              className={subcategory === selectedSubcategory ? "selected" : ""}
             >
-                <h2>{name}</h2>
-                {icon}
-
-
-
-
-
-            </CardCategoria>
-
-
-
-
-
-    );
-}
+              {subcategory}
+            </div>
+          ))}
+        </SubcategoriasContainer>
+      )}
+    </CardCategoria>
+  );
+};

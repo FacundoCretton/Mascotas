@@ -51,4 +51,17 @@ export const CardCategoria = styled.div`
     background-color: ${({ selected }) =>
       selected ? '#ff4848' : '#45a049'};
   }
+
+  &.selected {
+    // Agrega estilos para la categoría seleccionada
+    background-color: red; // o cualquier otro estilo que desees
+  }
+
+`;
+
+
+export const SubcategoriasContainer = styled.div`
+  display: flex;
+  justify-content: space-around;  // Ajusta según tus preferencias
+  margin-top: 10px;  // Ajusta según tus preferencias
 `;
