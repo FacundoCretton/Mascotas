@@ -17,8 +17,19 @@ export const categoriesSlice = createSlice({
     },
     selectCategory: (state, action) => {
       const selectedCategory = action.payload;
+
+      // Actualizar el arreglo de subcategorías en el estado
+      const categories = state.categories.map((category) => {
+        if (category.category === selectedCategory) {
+          return { ...category, subcategories: category.subcategories };
+        } else {
+          return category;
+        }
+      });
+
       return {
         ...state,
+        categories,
         selectedCategory,
         selectedSubcategory: null, // Reiniciar la subcategoría al cambiar la categoría
       };

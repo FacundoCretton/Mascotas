@@ -17,17 +17,6 @@ export const ContenedorCategorias = styled.div`
   gap: 20px;
 `;
 
-export const CategoriasContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  background-color: #f0f0f0;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-`;
-
 export const CardCategoria = styled.div`
   display: flex;
   flex-direction: column;
@@ -53,15 +42,31 @@ export const CardCategoria = styled.div`
   }
 
   &.selected {
-    // Agrega estilos para la categoría seleccionada
-    background-color: red; // o cualquier otro estilo que desees
+    background-color: red; 
   }
-
 `;
-
 
 export const SubcategoriasContainer = styled.div`
   display: flex;
-  justify-content: space-around;  // Ajusta según tus preferencias
-  margin-top: 10px;  // Ajusta según tus preferencias
+  justify-content: space-around;
+  margin-top: 10px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  div {
+    cursor: pointer;
+    padding: 8px;
+    margin: 0 5px;
+    border-radius: 4px;
+    background-color: ${({ selected }) => (selected ? '#ff6363' : 'blue')};
+    color: ${({ selected }) => (selected ? '#fff' : '#333')};
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: ${({ selected }) =>
+        selected ? '#ff4848' : '#45a049'};
+    }
+  }
 `;
