@@ -35,6 +35,8 @@ export const categoriesSlice = createSlice({
       };
     },
     selectSubcategory: (state, action) => {
+      console.log('State before:', state.selectedSubcategory);
+      console.log('Action payload:', action.payload);
       return {
         ...state,
         selectedSubcategory: action.payload,

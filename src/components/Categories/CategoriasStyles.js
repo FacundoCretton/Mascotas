@@ -60,13 +60,20 @@ export const SubcategoriasContainer = styled.div`
     padding: 8px;
     margin: 0 5px;
     border-radius: 4px;
-    background-color: ${({ selected }) => (selected ? '#ff6363' : 'blue')};
-    color: ${({ selected }) => (selected ? '#fff' : '#333')};
+    background-color: #4caf50;
+    color: #333;
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: ${({ selected }) =>
-        selected ? '#ff4848' : '#45a049'};
+      background-color: #45a049;
+    }
+
+    &.selected {
+      background-color: #ff6363;
+      color: #fff;
     }
   }
 `;
+
+
+

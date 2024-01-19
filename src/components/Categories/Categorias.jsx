@@ -1,8 +1,12 @@
-// Categorias.js
 import React from "react";
 import { Categoria } from "./Categoria";
 import { useDispatch, useSelector } from "react-redux";
-import { ContenedorPrincipal, TituloProductos, ContenedorCategorias, SubcategoriasContainer } from "./CategoriasStyles";
+import {
+  ContenedorPrincipal,
+  TituloProductos,
+  ContenedorCategorias,
+  SubcategoriasContainer,
+} from "./CategoriasStyles";
 import { selectSubcategory } from "../redux/categories/categoriesSlice";
 
 const Categorias = () => {
@@ -12,9 +16,14 @@ const Categorias = () => {
   const dispatch = useDispatch();
 
   const handleSubcategoryClick = (subcategory) => {
+    console.log('selectedSubcategory:', selectedSubcategory);
+    console.log('Is selected:', subcategory, selectedSubcategory);
     dispatch(selectSubcategory(subcategory));
   };
-  
+
+  // Obtenemos las subcategorías de la categoría seleccionada
+  const subcategories =
+    categories.find((category) => category.category === selectedCategory)?.subcategories;
 
   return (
     <ContenedorPrincipal>
@@ -25,12 +34,12 @@ const Categorias = () => {
         ))}
       </ContenedorCategorias>
       {selectedCategory && (
-        <SubcategoriasContainer>
-          {(categories.find((category) => category.category === selectedCategory) || {}).subcategories?.map((subcategory) => (
+        <SubcategoriasContainer subcategories={subcategories} selected={selectedSubcategory}>
+          {subcategories?.map((subcategory) => (
             <div
               key={subcategory}
               onClick={() => handleSubcategoryClick(subcategory)}
-              className={subcategory === selectedSubcategory ? "selected" : ""}
+              className={` ${subcategory === selectedSubcategory ? 'selected' : ''}`}
             >
               {subcategory}
             </div>
