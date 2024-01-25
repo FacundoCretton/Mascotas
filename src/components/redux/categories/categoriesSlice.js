@@ -4,12 +4,12 @@ import { Categories } from "../../Data/Categories";
 
 const INITIAL_STATE = {
   categories: Categories,
-  selectedCategory: null,
+  selectedCategory: 'Todos',
   selectedSubcategory: null,
 };
 
 export const categoriesSlice = createSlice({
-  name: "Categories",
+  name: Categories,
   initialState: INITIAL_STATE,
   reducers: {
     getCategories: (state) => {
@@ -35,11 +35,13 @@ export const categoriesSlice = createSlice({
       };
     },
     selectSubcategory: (state, action) => {
-      console.log('State before:', state.selectedSubcategory);
-      console.log('Action payload:', action.payload);
+      const selectedCategory = state.selectedCategory;
+      const selectedSubcategory = action.payload;
       return {
         ...state,
-        selectedSubcategory: action.payload,
+        selectedSubcategory,
+        // También puedes actualizar las subcategorías del estado si es necesario
+        subcategories: state.categories[selectedCategory]?.subcategories,
       };
     },
   },

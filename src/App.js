@@ -2,6 +2,7 @@ import './App.css';
 import Categorias from './components/Categories/Categorias';
 import InteractiveCarousel from './components/Hero/Hero';
 import ResponsiveAppBar from './components/Navbar/Navbar';
+import CardsProductos from './components/Products/CardsProductos';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
     <ResponsiveAppBar/>
     <InteractiveCarousel/>
     <Categorias/>
+    <CardsProductos/>
     
     </>
   );

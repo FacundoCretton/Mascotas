@@ -1,0 +1,50 @@
+import styled from "styled-components";
+
+export const ProductosContainer = styled.div `
+  display: grid;
+  place-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 400px);
+  row-gap: 3.5rem;
+  width: 100%;
+  padding: 1rem 0;
+`;
+
+
+
+export const CardsStyle = styled.div`
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 30px;
+    padding: 0 30px;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    gap: 20px;
+`
+
+export const ButtonContainer = styled.div`
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+`
+
+export const ContainerPrice = styled.div`
+    display: flex;
+    justify-content: space-around;
+
+`;
+
+
+export const CardPrice = styled.span`
+  font-weight: 800;
+  font-size: 1.75rem;
+  background: linear-gradient(83deg, #ffa100, #fb103d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`;
