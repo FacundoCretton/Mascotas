@@ -8,7 +8,7 @@ export const products = [
     desc:'Acà va un texto de prueba',
     //subcategory ['AlimentoPerros', 'Alimento'],
     price: 100,
-    img:'../../Assets/animales.jpg'
+    img:'./animales.jpg'
         
   },
 

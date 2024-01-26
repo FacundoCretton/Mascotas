@@ -1,4 +1,6 @@
-import styled from "styled-components";
+import Accordion from 'react-bootstrap/Accordion';
+import ListGroup from 'react-bootstrap/ListGroup';
+import styled from 'styled-components';
 
 export const ProductosContainer = styled.div `
   display: grid;
@@ -48,3 +50,9 @@ export const CardPrice = styled.span`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `;
+
+
+
+export const StyledAccordionHeader = styled(Accordion.Header)`
+  width: 150px;
+`

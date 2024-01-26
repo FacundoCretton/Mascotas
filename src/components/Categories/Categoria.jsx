@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectCategory } from "../redux/categories/categoriesSlice";
 import { CardCategoria } from "./CategoriasStyles";
 
-export const Categoria = ({ name, category }) => {
+export const Categoria = ({ name, category, icon }) => {
   const dispatch = useDispatch();
   const selectedCategory = useSelector((state) => state.categories.selectedCategory);
 
@@ -14,7 +14,11 @@ export const Categoria = ({ name, category }) => {
 
   return (
     <CardCategoria selected={category === selectedCategory} onClick={handleCategoryClick}>
-      <h2>{name}</h2>
+      <div>
+        {icon}
+        <h2>{name}</h2>
+      </div>
+      
     </CardCategoria>
   );
 };

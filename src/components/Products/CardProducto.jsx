@@ -11,14 +11,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup';
-import { ButtonContainer, CardPrice, CardsStyle, ContainerPrice } from "./ProductsStyles";
+import { ButtonContainer, CardPrice, CardsStyle, ContainerPrice, StyledAccordionHeader } from "./ProductsStyles";
 
 /* <Button onClick={() => dispatch(addToCart({img, title, desc, price, id}))}>Agregar</Button>  */
 
 const CardProducto = ({img, name, price, desc, id}) => {
   console.log (img)
 
-  
   const dispatch = useDispatch()
     return (
 
@@ -29,6 +28,9 @@ const CardProducto = ({img, name, price, desc, id}) => {
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Img variant="top" src={img} />
+        
+
+
         
         
 
@@ -42,7 +44,7 @@ const CardProducto = ({img, name, price, desc, id}) => {
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="1">
-        <Accordion.Header>Herramientas utilizadas</Accordion.Header>
+        <StyledAccordionHeader>Herramientas utilizadas</StyledAccordionHeader>
         <Accordion.Body>
         <ListGroup>
           {/* <ListGroup.Item><img src={html1} alt="html" width="30px"/> HTML</ListGroup.Item>

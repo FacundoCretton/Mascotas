@@ -1,7 +1,7 @@
 
-// import { FaListUl } from "react-icons/fa";
-// import { FaDog } from "react-icons/fa6";
-// import { FaCat } from "react-icons/fa";
+import { FaListUl } from "react-icons/fa";
+import { FaDog } from "react-icons/fa6";
+import { FaCat } from "react-icons/fa";
 
 
 
@@ -11,7 +11,7 @@ export const Categories = [
     {
         id: 1,
         name: 'Todos',
-        // icon: <FaListUl />,
+        icon: <FaListUl />,
         category: 'Todos',
         //subcategory: ['Alimento', 'Juguetes', 'Cuchas'],
 
@@ -22,7 +22,7 @@ export const Categories = [
     {
         id: 2,
         name: 'Perros',
-        // icon: <FaDog />,
+        icon: <FaDog />,
         category: 'Perros',
         //subcategory: ['AlimentoPerros', 'JuguetesPerros', 'CuchasPerros'],
  
@@ -31,7 +31,7 @@ export const Categories = [
     {
         id: 3,
         name: 'Gatos',
-        // icon: <FaCat />,
+        icon: <FaCat />,
         category: 'Gatos',
         //subcategory: ['AlimentoGatos', 'JuguetesGatos', 'CuchasGatos'],
 

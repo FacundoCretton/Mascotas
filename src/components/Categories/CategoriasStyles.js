@@ -36,6 +36,10 @@ export const CardCategoria = styled.div`
     color: ${({ selected }) => (selected ? '#fff' : '#333')};
   }
 
+  /* div{
+    display: flex;
+  } */
+
   &:hover {
     background-color: ${({ selected }) =>
       selected ? '#ff4848' : '#45a049'};
@@ -77,3 +81,7 @@ export const SubcategoriasContainer = styled.div`
 
 
 
+export const Re = styled.div`
+  display: flex;
+
+`;
