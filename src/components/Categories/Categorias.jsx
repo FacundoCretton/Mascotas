@@ -7,18 +7,15 @@ import {
   ContenedorCategorias,
   SubcategoriasContainer,
 } from "./CategoriasStyles";
-import { selectSubcategory } from "../redux/categories/categoriesSlice";
 
 const Categorias = () => {
   const categories = useSelector((state) => state.categories.categories);
   const selectedCategory = useSelector((state) => state.categories.selectedCategory);
   const selectedSubcategory = useSelector((state) => state.categories.selectedSubcategory);
-  const dispatch = useDispatch();
 
   const handleSubcategoryClick = (subcategory) => {
     console.log('selectedSubcategory:', selectedSubcategory);
     console.log('Is selected:', subcategory, selectedSubcategory);
-    dispatch(selectSubcategory(subcategory));
   };
 
   // Obtenemos las subcategorías de la categoría seleccionada

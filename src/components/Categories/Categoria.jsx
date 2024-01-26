@@ -1,7 +1,6 @@
-// Categoria.js
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { selectCategory, selectSubcategory } from "../redux/categories/categoriesSlice";
+import { selectCategory } from "../redux/categories/categoriesSlice";
 import { CardCategoria } from "./CategoriasStyles";
 
 export const Categoria = ({ name, category }) => {
@@ -10,7 +9,7 @@ export const Categoria = ({ name, category }) => {
 
   const handleCategoryClick = () => {
     dispatch(selectCategory(category));
-    dispatch(selectSubcategory(null));
+    // dispatch(selectSubcategory(null));
   };
 
   return (

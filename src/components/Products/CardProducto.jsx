@@ -1,7 +1,7 @@
 
 import React from "react";
 import {formatPrice} from '../../utils/formatPrice';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 
 
 import Button from "../UI/Button/Button"; 
@@ -15,9 +15,11 @@ import { ButtonContainer, CardPrice, CardsStyle, ContainerPrice } from "./Produc
 
 /* <Button onClick={() => dispatch(addToCart({img, title, desc, price, id}))}>Agregar</Button>  */
 
-const CardProducto = ({img, name, price, id}) => {
+const CardProducto = ({img, name, price, desc, id}) => {
+  console.log (img)
+
   
-    const dispatch = useDispatch();
+  const dispatch = useDispatch()
     return (
 
 
@@ -27,14 +29,15 @@ const CardProducto = ({img, name, price, id}) => {
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Img variant="top" src={img} />
+        
+        
 
         <Accordion>
       <Accordion.Item eventKey="0">
         <Accordion.Header>Descripción</Accordion.Header>
         <Accordion.Body>
         <Card.Text>
-          Diseño de sitio web para empresa ficticia de venta de entradas para eventos.
-          Con este proyecto pude practicar y mejorar mis habilidades en HTML, CSS y recibir la certificación de Diseño Web de NUCBA
+          {desc}
         </Card.Text>
         </Accordion.Body>
       </Accordion.Item>

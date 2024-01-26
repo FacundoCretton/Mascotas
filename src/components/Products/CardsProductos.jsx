@@ -7,35 +7,32 @@ import { INITIAL_LIMIT } from "../../utils/constants";
 
 const CardsProductos = () => {
     const [limit, setLimit] = useState(INITIAL_LIMIT);
-    const products = useSelector((state) => state.products.products);
-    const selectedCategory = useSelector((state) => state.categories.selectedCategory);
+    let products = useSelector(state => state.products.products);
+    const selectedCategory = useSelector(state => state.categories.selectedCategory);
     const totalProducts = useSelector((state) => state.products.totalProducts);
   
-    console.log("Selected Category:", selectedCategory);
-    console.log("Filtered Products:", products[selectedCategory]);
   
-    let filteredProducts = products;
-
-    // if (selectedCategory && selectedCategory !== "Todos") {
-    //   filteredProducts = products.filter(
-    //     (product) => product.category === selectedCategory
-    //   );
-    // }
-  
-
+    
+    if (selectedCategory && selectedCategory !== "Todos") {
+      products = {
+        [selectedCategory]: products[selectedCategory]
+      };
+    }
     return (
       <>
-<ProductosContainer>
-  {Array.isArray(filteredProducts) &&
-    filteredProducts.flatMap((subcategories) =>
-      subcategories.filter((pet) =>
-        (limit >= pet.id || selectedCategory) &&
-        (!selectedCategory || pet.subcategory.includes(selectedCategory))
-      ).map((pet) => (
-        <CardProducto key={pet.id} {...pet} />
-      ))
-    )}
-</ProductosContainer>
+      <ProductosContainer>
+        {
+          Object.entries(products).map(([,pets]) => {
+            return pets.map((pet) => {
+              if (limit >= pet.id || selectedCategory){
+                return <CardProducto {...pet} key={pet.id} />
+              }
+              return null
+              
+            })
+          })
+        }
+      </ProductosContainer>
   
         {!selectedCategory && (
           <ButtonContainer>
