@@ -16,7 +16,6 @@ import { ButtonContainer, CardPrice, CardsStyle, ContainerPrice, StyledAccordion
 /* <Button onClick={() => dispatch(addToCart({img, title, desc, price, id}))}>Agregar</Button>  */
 
 const CardProducto = ({img, name, price, desc, id}) => {
-  console.log (img)
 
   const dispatch = useDispatch()
     return (
