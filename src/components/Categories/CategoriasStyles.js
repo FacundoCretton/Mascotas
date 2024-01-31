@@ -85,3 +85,15 @@ export const Re = styled.div`
   display: flex;
 
 `;
+export const CategoryIcon = styled.div`
+  font-size: 32px;
+  margin-bottom: 10px;
+
+`;
+
+export const CategoryList = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+`;
+

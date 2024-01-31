@@ -1,12 +1,16 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectCategory } from "../redux/categories/categoriesSlice";
-import { CardCategoria } from "./CategoriasStyles";
+import { CardCategoria, CategoryIcon } from "./CategoriasStyles";
+
+
 
 
 export const Categoria = ({ name, category, icon }) => {
   const dispatch = useDispatch();
   const selectedCategory = useSelector((state) => state.categories.selectedCategory);
+
+  
 
   const handleCategoryClick = () => {
     dispatch(selectCategory(category));
@@ -16,7 +20,10 @@ export const Categoria = ({ name, category, icon }) => {
   return (
     <CardCategoria selected={category === selectedCategory} onClick={handleCategoryClick}>
       <div>
-        {icon}
+      <CategoryIcon>
+       <img src= {icon} alt="icono"/>
+      </CategoryIcon>
+
         <h2>{name}</h2>
       </div>
       

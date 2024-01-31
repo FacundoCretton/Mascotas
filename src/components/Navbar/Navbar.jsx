@@ -22,7 +22,7 @@ const theme = createTheme({
     values: {
       xs: 0,
       sm: 600,
-      md: 750,  // Cambie el punto de quiebre a 700px
+      md: 750,  
       lg: 960,
       xl: 1200,
     },
