@@ -27,7 +27,8 @@ const Categorias = () => {
       <TituloProductos>Nuestros productos</TituloProductos>
       <ContenedorCategorias>
         {categories.map((category) => (
-          <Categoria key={category.id}
+          <Categoria 
+            key={category.id}
           
            {...category} />
         ))}

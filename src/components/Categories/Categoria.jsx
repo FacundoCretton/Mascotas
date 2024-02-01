@@ -21,7 +21,7 @@ export const Categoria = ({ name, category, icon }) => {
     <CardCategoria selected={category === selectedCategory} onClick={handleCategoryClick}>
       <div>
       <CategoryIcon>
-       <img src= {icon} alt="icono"/>
+        {icon}
       </CategoryIcon>
 
         <h2>{name}</h2>
