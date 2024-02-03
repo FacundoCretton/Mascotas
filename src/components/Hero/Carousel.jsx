@@ -1,8 +1,9 @@
 import Carousel from 'react-bootstrap/Carousel';
 import { Slide1, Slide2, Slide3 } from './Slides/Slide1';
+import { StyledCarousel } from './CarouselStyles';
 const Carousell =()=> {
   return (
-    <Carousel fade>
+    <StyledCarousel fade>
       <Carousel.Item>
         <Slide1 text="First slide" />
         <Carousel.Caption>
@@ -10,7 +11,7 @@ const Carousell =()=> {
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item className="no-width">
         <Slide2 text="Second slide" />
         <Carousel.Caption>
           <h3>Second slide label</h3>
@@ -26,7 +27,7 @@ const Carousell =()=> {
           </p>
         </Carousel.Caption>
       </Carousel.Item>
-    </Carousel>
+    </StyledCarousel>
   );
 }
 

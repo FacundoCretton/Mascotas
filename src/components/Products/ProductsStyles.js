@@ -1,5 +1,6 @@
 import Accordion from 'react-bootstrap/Accordion';
 import ListGroup from 'react-bootstrap/ListGroup';
+import Card from 'react-bootstrap/Card';
 import styled from 'styled-components';
 
 export const ProductosContainer = styled.div `
@@ -56,3 +57,13 @@ export const CardPrice = styled.span`
 export const StyledAccordionHeader = styled(Accordion.Header)`
   width: 150px;
 `
+
+
+
+export const CustomCardTitle = styled(Card.Title)`
+  font-size: 18px; 
+  color: #333; 
+  text-align: center;
+  font-weight: 600;
+  
+`;

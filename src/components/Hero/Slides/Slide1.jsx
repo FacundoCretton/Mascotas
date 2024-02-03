@@ -1,4 +1,5 @@
 import React from 'react';
+import InteractiveCarousel from '../Hero';
 
 const Slide1 = () => {
   return (
@@ -10,15 +11,9 @@ const Slide1 = () => {
   );
 }
 
-const Slide2 = () => {
-    return (
-        <img
-        className="d-block w-100"
-        src="./animales.jpg"
-        alt="Slide 2"
-        />
-    );
-}
+const Slide2 = () => (
+  <InteractiveCarousel  />
+);
 
 
 const Slide3 = () => {
@@ -32,4 +27,4 @@ const Slide3 = () => {
 }
 
 
-export { Slide1, Slide2, Slide3 };
+export { Slide1, Slide2 , Slide3 };

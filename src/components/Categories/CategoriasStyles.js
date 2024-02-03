@@ -4,6 +4,7 @@ import styled from 'styled-components';
 export const ContenedorPrincipal = styled.div`
   text-align: center;
   margin: 50px 0;
+  padding: 20px;
 `;
 
 export const TituloProductos = styled.h2`
@@ -14,31 +15,20 @@ export const TituloProductos = styled.h2`
 export const ContenedorCategorias = styled.div`
   display: flex;
   justify-content: center;
-  gap: 20px;
+  flex-wrap: wrap;
+  
 `;
 
 export const CardCategoria = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
 
-  padding: 10px;
+  padding: 10px 15px;
   background-color: ${({ selected }) => (selected ? '#ff6363' : '#4caf50')};
-  border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-
-  h2 {
-    font-size: 1rem;
-    margin: 0;
-    color: ${({ selected }) => (selected ? '#fff' : '#333')};
-  }
-
-  /* div{
-    display: flex;
-  } */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid blue;
 
   &:hover {
     background-color: ${({ selected }) =>
@@ -47,6 +37,13 @@ export const CardCategoria = styled.div`
 
   &.selected {
     background-color: red; 
+  }
+
+  h2{
+    font-size: 16px;
+    text-align: center;
+    color: ${({ selected }) => (selected ? '#fff' : '#333')};
+    font-weight: 600;
   }
 `;
 
@@ -81,10 +78,7 @@ export const SubcategoriasContainer = styled.div`
 
 
 
-export const Re = styled.div`
-  display: flex;
 
-`;
 export const CategoryIcon = styled.div`
   font-size: 32px;
   margin-bottom: 10px;

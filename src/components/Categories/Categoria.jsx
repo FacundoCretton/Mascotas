@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectCategory } from "../redux/categories/categoriesSlice";
-import { CardCategoria, CategoryIcon } from "./CategoriasStyles";
+import { CardCategoria, CategoryIcon, CategoryName } from "./CategoriasStyles";
 
 
 
@@ -18,14 +18,15 @@ export const Categoria = ({ name, category, icon }) => {
   };
 
   return (
-    <CardCategoria selected={category === selectedCategory} onClick={handleCategoryClick}>
-      <div>
+    <CardCategoria 
+      selected={category === selectedCategory} 
+      onClick={handleCategoryClick}
+    >
       <CategoryIcon>
         {icon}
       </CategoryIcon>
 
-        <h2>{name}</h2>
-      </div>
+      <h2>{name}</h2>
       
     </CardCategoria>
   );

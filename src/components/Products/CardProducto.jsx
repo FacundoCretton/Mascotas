@@ -11,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup';
-import { ButtonContainer, CardPrice, CardsStyle, ContainerPrice, StyledAccordionHeader } from "./ProductsStyles";
+import { ButtonContainer, CardPrice, CardsStyle, ContainerPrice, CustomCardTitle, StyledAccordionHeader } from "./ProductsStyles";
 
 /* <Button onClick={() => dispatch(addToCart({img, title, desc, price, id}))}>Agregar</Button>  */
 
@@ -25,7 +25,7 @@ const CardProducto = ({img, name, price, desc, id}) => {
     <CardsStyle>
     <Card style={{ width: '23rem' }}>
       <Card.Body>
-        <Card.Title>{name}</Card.Title>
+        <CustomCardTitle>{name}</CustomCardTitle>
         <Card.Img variant="top" src={img} />
         
 

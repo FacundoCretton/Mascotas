@@ -4,7 +4,7 @@ import { animated } from 'react-spring';
 
 export const CarouselContainer = styled.div`
   width: 80%;
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   overflow: hidden;
   margin-top: 100px;
@@ -58,8 +58,8 @@ export const InfoText = styled(animated.div)`
 `;
 
 export const CatFoodImage = styled.img`
-  width: 40%; /* Ajusta según sea necesario */
-  height: 40%;
+  width: 60px; /* Ajusta según sea necesario */
+  height: 60px;
   margin-right: 10px; /* Espacio a la derecha de la imagen */
 `;
 
@@ -89,29 +89,33 @@ export const AnimatedOverlay = styled(animated.div)`
 export const CarouselSlide = styled.div`
   display: flex;
   justify-content: space-between;
+  max-width: 800px;
+  max-height: 800px;
 `;
 
 export const InfoContainer = styled.div`
   flex: 1;
+  max-width: 100%;
   display: flex;
   align-items: center;
   background-color: #f8f8f8;
-  padding: 20px;
-  cursor: pointer; /* Hacer que el contenedor sea clickeable */
+  cursor: pointer; 
 `;
 
 export const LeftContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  max-width: 400px;
 `;
 
 export const RightContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 600px;
+  max-width: 400px;
 `;
+
 
 
 
@@ -127,7 +131,13 @@ export const FoodImage = styled.img`
   width: 80px;
   height: 120px;
   margin-bottom: 10px;
-  cursor: pointer; /* Hacer que la imagen sea clickeable */
-  border: ${(props) => (props.selected ? '2px solid #00f' : 'none')}; /* Estilo de borde si está seleccionado */
+  cursor: pointer; 
+  border: ${(props) => (props.selected ? '2px solid #00f' : 'none')}; 
+
+
+  img{
+    width: 90px;
+    height: 100px;
+  }
 `;
 

@@ -14,8 +14,8 @@ import {
 import textData from '../Data/FirstSlideData/textData';
 
 // Estilos reutilizables
-const dogImageStyles = { width: 200, height: 320 };
-const catImageStyles = { width: 200, height: 300, marginTop: 24 };
+const dogImageStyles = { width: 90, height: 120 };
+const catImageStyles = { width: 90, height: 120, marginTop: 24 };
 
 // Componente reutilizable de imagen animada
 const AnimatedPetImage = ({ animal, onClick, active, ...props }) => {
@@ -117,7 +117,6 @@ const InteractiveCarousel = () => {
           />
         </RightContainer>
       </CarouselSlide>
-      {/* Otros slides aquí */}
     </CarouselContainer>
   );
 };
