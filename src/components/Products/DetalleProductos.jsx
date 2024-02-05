@@ -4,6 +4,7 @@ import { products } from "../Data/ProductsData";
 import { productsSpecifications } from "../Data/especificacionesProductos";
 
 const DetalleProducto = () => {
+  
     const { id } = useParams();
     const producto = products.find((product) => product.id === parseInt(id));
   
@@ -16,6 +17,7 @@ const DetalleProducto = () => {
     return (
       <div>
         <h1>{producto.name}</h1>
+        <img src={producto.img} alt={producto.name} />
         <p>{producto.desc}</p>
         
         <p>Precio: ${producto.price}</p>

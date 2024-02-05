@@ -9,7 +9,7 @@ export const StyledButton = styled(motion.button)`
     outline: none;
     border: none;
     cursor: pointer;
-    background: darkkhaki;
+    background: #2196f3  ;
     color: white;
     text-transform: uppercase;
     font-weight: 400;

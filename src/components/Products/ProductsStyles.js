@@ -27,6 +27,7 @@ export const CardsStyle = styled.div`
     height: 100%;
     max-width: 1200px;
     gap: 20px;
+    
 `
 
 export const ButtonContainer = styled.div`

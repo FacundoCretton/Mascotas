@@ -23,7 +23,7 @@ const CardProducto = ({img, name, price, desc, id}) => {
 
 
     <CardsStyle>
-    <Card style={{ width: '23rem' }}>
+    <Card style={{ width: '23rem', background: '#f5f5f5', border: '1px solid #cccccc ', color: '#000000' }}>
       <Card.Body>
         <CustomCardTitle>{name}</CustomCardTitle>
         <Card.Img variant="top" src={img} />
