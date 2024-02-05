@@ -5,6 +5,7 @@ import persistStore from 'redux-persist/es/persistStore';
 
 import categoriesReducer from "./categories/categoriesSlice";
 import productsReducer from "./products/productsSlice";
+import especificationsReducer from "./products/productSpecificationsSlice";
 
 
 
@@ -12,6 +13,7 @@ const reducers = combineReducers(
     {
         categories: categoriesReducer,
         products: productsReducer,
+        especifications: especificationsReducer,
 
 
     }
