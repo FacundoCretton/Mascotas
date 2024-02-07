@@ -1,22 +1,19 @@
+// productSpecificationsSlice.js
+
 import { createSlice } from '@reduxjs/toolkit';
 import { productsSpecifications } from '../../Data/especificacionesProductos';
 
 const INITIAL_STATE = {
-    especifications: productsSpecifications,
+  specifications: productsSpecifications,
 };
 
 export const productSpecificationsSlice = createSlice({
-    name: 'productSpecifications',
-    initialState: INITIAL_STATE,
-    reducers:{
-        getEspecifications: state =>{
-            return state;
-        },
-    }
-
-
-
+  name: 'productSpecifications',
+  initialState: INITIAL_STATE,
+  reducers: {
+    getSpecifications: (state) => state,
+  },
 });
 
-export const {getEspecifications} = productSpecificationsSlice.actions;
+export const { getSpecifications } = productSpecificationsSlice.actions;
 export default productSpecificationsSlice.reducer;

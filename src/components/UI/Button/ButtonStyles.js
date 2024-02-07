@@ -13,6 +13,8 @@ export const StyledButton = styled(motion.button)`
     color: white;
     text-transform: uppercase;
     font-weight: 400;
+    font-size:14px;
+
 
     &:hover {
         opacity: 95%;
