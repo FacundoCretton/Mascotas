@@ -1,4 +1,3 @@
-// CategoriasStyles.js
 import styled from 'styled-components';
 
 export const ContenedorPrincipal = styled.div`
@@ -16,73 +15,56 @@ export const ContenedorCategorias = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  
 `;
 
 export const CardCategoria = styled.div`
-
-  padding: 10px 15px;
-  background-color: ${({ selected }) => (selected ? '#ff6363' : '#4caf50')};
+  padding: 5px 35px;
+  background-color: ${({ selected }) => (selected ? '#FFB74D' : '#90CAF9')};
   cursor: pointer;
   transition: background-color 0.3s ease;
   display: flex;
   align-items: center;
-  gap: 10px;
-  border: 1px solid blue;
+  justify-content: center;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   &:hover {
-    background-color: ${({ selected }) =>
-      selected ? '#ff4848' : '#45a049'};
+    background-color: ${({ selected }) => (selected ? '#FFA726' : '#64B5F6')};
   }
 
-  &.selected {
-    background-color: red; 
-  }
-
-  h2{
-    font-size: 16px;
-    text-align: center;
+  h2 {
+    font-size: 18px;
     color: ${({ selected }) => (selected ? '#fff' : '#333')};
     font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
   }
 `;
 
 export const SubcategoriasContainer = styled.div`
   display: flex;
   justify-content: space-around;
-  margin-top: 10px;
-  background-color: #f0f0f0;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
 
   div {
     cursor: pointer;
-    padding: 8px;
+    padding: 8px 15px;
     margin: 0 5px;
-    border-radius: 4px;
-    background-color: #4caf50;
-    color: #333;
+    border-radius: 20px;
+    background-color: ${({ selected }) => (selected ? '#E57373' : '#AED581')};
+    color: ${({ selected }) => (selected ? '#fff' : '#333')};
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #45a049;
-    }
-
-    &.selected {
-      background-color: #ff6363;
-      color: #fff;
+      background-color: ${({ selected }) => (selected ? '#EF5350' : '#81C784')};
     }
   }
 `;
 
-
-
-
 export const CategoryIcon = styled.div`
-  font-size: 32px;
+  font-size: 23px;
   margin-bottom: 10px;
-
 `;
 
 export const CategoryList = styled.div`
@@ -91,3 +73,11 @@ export const CategoryList = styled.div`
   flex-wrap: wrap;
 `;
 
+
+
+export const ElDivi = styled.div`
+
+  /* display: flex; */
+  gap:30px
+
+`;

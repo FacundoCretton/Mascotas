@@ -6,11 +6,12 @@ export const TituloH1 = styled.h1`
   text-align: center;
 `;
 
-export const DetallesWrapper = styled.div`
-  display: flex;
-  align-items: flex-start;
-  margin: 2rem 0;
-`;
+// export const DetallesWrapper = styled.div`
+//   display: grid;
+//   grid-template-columns: 1fr 2fr 1fr; /* Divide el contenido en tres columnas */
+//   gap: 20px; /* Espacio entre las columnas */
+//   margin: 2rem 0;
+// `;
 
 export const ProductImage = styled.img`
   position: relative;
@@ -33,14 +34,14 @@ export const ProductImage = styled.img`
   }
 `;
 
-export const ProductDetails = styled.div`
-  flex-grow: 1;
-  margin: 0 1rem;
+// export const ProductDetails = styled.div`
+//   flex-grow: 1;
+//   margin: 0 1rem;
 
-  h2 {
-    margin-top: 1rem;
-  }
-`;
+//   h2 {
+//     margin-top: 1rem;
+//   }
+// `;
 
 export const Price = styled.p`
   font-size: 1.2rem;
@@ -51,14 +52,14 @@ export const Specifications = styled.div`
   margin-top: 1rem;
 `;
 
-export const AdditionalInfo = styled.div`
-  width: 30%;
-  border: 1px solid #ccc;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-`;
+// export const AdditionalInfo = styled.div`
+//   width: 30%;
+//   border: 1px solid #ccc;
+//   padding: 1rem;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-end;
+// `;
 
 export const AddToCartButton = styled.button`
   background-color: #28a745;
@@ -129,11 +130,59 @@ export const BeneficioText = styled(Typography)`
 `;
 
 
+
+
 export const ImageColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  max-width: 25%;
-
-
+  grid-area: images; /* Asignar el área 'images' a esta columna */
 
 `;
+
+export const ProductDetails = styled.div`
+    grid-area: product-info; /* Asignar el área 'product-info' a esta columna */
+
+`;
+
+
+
+
+export const DetallesWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 25% 50% 25%; /* Tres columnas de igual tamaño */
+  grid-gap: 20px; /* Espacio entre las columnas */
+  grid-template-areas: "images product-info additional-info"; /* Definir las áreas de la cuadrícula */
+  margin: 2rem 0;
+`;
+
+
+
+export const AdditionalInfo = styled.div`
+  /* Alinear arriba */
+  height: 30%; /* Ocupar toda la altura del contenedor */
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  grid-area: additional-info; /* Asignar el área 'additional-info' a esta columna */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 20px;
+`;
+
+export const AdditionalInfoTitle = styled.h2`
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+`;
+
+export const AdditionalInfoText = styled.p`
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+`;
+
+export const TotalPrice = styled.p`
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-top: 20px;
+`;
+
+// -------------------
+

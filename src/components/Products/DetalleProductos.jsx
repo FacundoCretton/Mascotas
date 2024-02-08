@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { DetallesWrapper, TituloH1, ProductImage, ProductDetails, Price, Specifications, AdditionalInfo, AddToCartButton, DescriptionWrapper, DescriptionTitle, DescriptionText, BeneficiosWrapper, BeneficioItem, BeneficioIcon, BeneficioText, ImageColumn } from "./DetalleProductosStyles";
-import { Divider, InputNumber, Select } from "antd";
-import "antd/dist/antd";
+import { DetallesWrapper, TituloH1, ProductImage, ProductDetails, Price, Specifications, DescriptionWrapper, DescriptionTitle, DescriptionText, BeneficiosWrapper, ImageColumn, BeneficioIcon } from "./DetalleProductosStyles";
+import { Divider } from "antd";
 import CompositionTable from "./CompositionTable";
 import { ListItem, ListItemText } from "@mui/material";
 import PetsIcon from '@mui/icons-material/Pets';
-
-const { Option } = Select;
+import AdditionalInfoComponent from "./AditionalInfoComponent";
 
 const DetalleProducto = () => {
   const { id } = useParams();
@@ -41,7 +39,6 @@ const DetalleProducto = () => {
 
   const handleCantidadAdicionalChange = (value) => {
     setCantidadAdicional(value);
-    setInputValue(value);
   };
 
   const addToCart = () => {
@@ -54,27 +51,11 @@ const DetalleProducto = () => {
   const totalPrice =
     producto.price * (cantidad === "masDe3" ? cantidadAdicional : cantidad);
 
-  const dropdownRender = (menu) => {
-    return (
-      <div>
-        {menu}
-        {inputValue === "masDe3" && (
-          <InputNumber
-            min={0}
-            value={cantidadAdicional}
-            onChange={handleCantidadAdicionalChange}
-            style={{ marginTop: 8 }}
-          />
-        )}
-      </div>
-    );
-  };
-
   return (
     <DetallesWrapper>
       <ImageColumn>
-      <ProductImage src={producto.img} alt={producto.name} />
-      <ProductImage src={producto.imgDorso} alt={producto.name} />
+        <ProductImage src={producto.img} alt={producto.name} />
+        <ProductImage src={producto.imgDorso} alt={producto.name} />
       </ImageColumn>
 
       <ProductDetails>
@@ -85,20 +66,9 @@ const DetalleProducto = () => {
           <DescriptionText>{specifications.desc}</DescriptionText>
         </DescriptionWrapper>
         <Price>Precio: ${producto.price}</Price>
-        <Select
-          value={inputValue}
-          style={{ width: 120 }}
-          onChange={handleCantidadChange}
-          dropdownRender={dropdownRender}
-        >
-          <Option value={1}>1</Option>
-          <Option value={2}>2</Option>
-          <Option value={3}>3</Option>
-          <Option value={"masDe3"}>Más de 3 unidades</Option>
-        </Select>
+
         {specifications && (
           <Specifications>
-
             {specifications.beneficios && (
               <BeneficiosWrapper>
                 <h3>Beneficios:</h3>
@@ -113,14 +83,16 @@ const DetalleProducto = () => {
         )}
       </ProductDetails>
       
-      <AdditionalInfo>
-        <h2>Información adicional:</h2>
-        {/* El Divider ahora se encuentra dentro del AdditionalInfo */}
-        <p>Calificación: {producto.calificacion}</p>
-        <p>Más formas de entrega...</p>
-        <AddToCartButton onClick={addToCart}>Agregar al carrito</AddToCartButton>
-        <p>Total: ${totalPrice}</p>
-      </AdditionalInfo>
+      <AdditionalInfoComponent 
+        producto={producto} 
+        totalPrice={totalPrice} 
+        addToCart={addToCart} 
+        cantidad={cantidad} 
+        handleCantidadChange={handleCantidadChange} 
+        inputValue={inputValue} 
+        handleCantidadAdicionalChange={handleCantidadAdicionalChange} 
+        cantidadAdicional={cantidadAdicional} 
+      />
     </DetallesWrapper>
   );
 };
@@ -132,7 +104,7 @@ const ListBeneficios = ({ beneficios }) => {
         <React.Fragment key={index}>
           <ListItem>
             <BeneficioIcon>
-            <PetsIcon style={{ color: "warning" }} /> {/* Cambia el color a verde */}
+              <PetsIcon style={{ color: "warning" }} /> {/* Cambia el color a verde */}
             </BeneficioIcon>
             <ListItemText primary={beneficio} />
           </ListItem>

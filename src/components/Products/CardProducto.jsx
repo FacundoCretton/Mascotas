@@ -43,7 +43,7 @@ const CardProducto = ({ img, name, price, desc, id, stock }) => {
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="1">
-              <StyledAccordionHeader>Herramientas utilizadas</StyledAccordionHeader>
+              {/* <StyledAccordionHeader>Herramientas utilizadas</StyledAccordionHeader> */}
               <Accordion.Body>
                 <ListGroup>
                   {/* <ListGroup.Item><img src={html1} alt="html" width="30px"/> HTML</ListGroup.Item>

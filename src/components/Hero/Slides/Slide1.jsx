@@ -11,16 +11,20 @@ const Slide1 = () => {
   );
 }
 
-const Slide2 = () => (
-  <InteractiveCarousel  />
-);
+const Slide2 = () =>{    return (
+  <img
+  className="d-block w-100"
+  src="./animales2.jpeg"
+  alt="Slide 2"
+  />
+);}
 
 
 const Slide3 = () => {
     return (
         <img
         className="d-block w-100"
-        src="./animales.jpg"
+        src="./animales3.jpg"
         alt="Slide 3"
         />
     );

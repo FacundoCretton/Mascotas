@@ -7,23 +7,23 @@ const Carousell =()=> {
       <Carousel.Item>
         <Slide1 text="First slide" />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>Primer slide</h3>
+          <p>Acá va un texto de prueba.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item className="no-width">
         <Slide2 text="Second slide" />
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Segundo slide</h3>
+          <p>Acá va un texto de prueba.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <Slide3 text="Third slide" />
         <Carousel.Caption>
-          <h3>Third slide label</h3>
+          <h3>Tercer slide label</h3>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          Acá va un texto de prueba.
           </p>
         </Carousel.Caption>
       </Carousel.Item>
