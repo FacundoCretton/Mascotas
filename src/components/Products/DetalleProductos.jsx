@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { DetallesWrapper, TituloH1, ProductImage, ProductDetails, Price, Specifications, AdditionalInfo, AddToCartButton, DescriptionWrapper, DescriptionTitle, DescriptionText, BeneficiosWrapper, BeneficioItem, BeneficioIcon, BeneficioText } from "./DetalleProductosStyles";
-import { InputNumber, Select  } from "antd";
+import { DetallesWrapper, TituloH1, ProductImage, ProductDetails, Price, Specifications, AdditionalInfo, AddToCartButton, DescriptionWrapper, DescriptionTitle, DescriptionText, BeneficiosWrapper, BeneficioItem, BeneficioIcon, BeneficioText, ImageColumn } from "./DetalleProductosStyles";
+import { Divider, InputNumber, Select } from "antd";
 import "antd/dist/antd";
 import CompositionTable from "./CompositionTable";
-import { CheckCircle } from "@mui/icons-material"; // Importar el icono CheckCircle de Material-UI
-
-
-
+import { ListItem, ListItemText } from "@mui/material";
+import PetsIcon from '@mui/icons-material/Pets';
 
 const { Option } = Select;
 
@@ -74,13 +72,19 @@ const DetalleProducto = () => {
 
   return (
     <DetallesWrapper>
+      <ImageColumn>
       <ProductImage src={producto.img} alt={producto.name} />
+      <ProductImage src={producto.imgDorso} alt={producto.name} />
+      </ImageColumn>
+
       <ProductDetails>
         <TituloH1>{producto.name}</TituloH1>
+        <Divider/>
         <DescriptionWrapper>
-              <DescriptionTitle>Descripción:</DescriptionTitle>
-              <DescriptionText>{specifications.desc}</DescriptionText>
-            </DescriptionWrapper>        <Price>Precio: ${producto.price}</Price>
+          <DescriptionTitle>Descripción:</DescriptionTitle>
+          <DescriptionText>{specifications.desc}</DescriptionText>
+        </DescriptionWrapper>
+        <Price>Precio: ${producto.price}</Price>
         <Select
           value={inputValue}
           style={{ width: 120 }}
@@ -94,28 +98,24 @@ const DetalleProducto = () => {
         </Select>
         {specifications && (
           <Specifications>
+
+            {specifications.beneficios && (
+              <BeneficiosWrapper>
+                <h3>Beneficios:</h3>
+                <ListBeneficios beneficios={specifications.beneficios} />
+              </BeneficiosWrapper>
+            )}
             <h2>Especificaciones:</h2>
             {specifications.composicion && (
               <CompositionTable composition={specifications.composicion} />
             )}
-{specifications.beneficios && (
-  <BeneficiosWrapper>
-    <h3>Beneficios:</h3>
-    {specifications.beneficios.map((beneficio, index) => (
-      <BeneficioItem key={index}>
-        <BeneficioIcon>
-          <CheckCircle color="primary" /> 
-        </BeneficioIcon>
-        <BeneficioText>{beneficio}</BeneficioText>
-      </BeneficioItem>
-    ))}
-  </BeneficiosWrapper>
-)}
           </Specifications>
         )}
       </ProductDetails>
+      
       <AdditionalInfo>
         <h2>Información adicional:</h2>
+        {/* El Divider ahora se encuentra dentro del AdditionalInfo */}
         <p>Calificación: {producto.calificacion}</p>
         <p>Más formas de entrega...</p>
         <AddToCartButton onClick={addToCart}>Agregar al carrito</AddToCartButton>
@@ -124,5 +124,23 @@ const DetalleProducto = () => {
     </DetallesWrapper>
   );
 };
+
+const ListBeneficios = ({ beneficios }) => {
+  return (
+    <BeneficiosWrapper>
+      {beneficios.map((beneficio, index) => (
+        <React.Fragment key={index}>
+          <ListItem>
+            <BeneficioIcon>
+            <PetsIcon style={{ color: "warning" }} /> {/* Cambia el color a verde */}
+            </BeneficioIcon>
+            <ListItemText primary={beneficio} />
+          </ListItem>
+          {index !== beneficios.length - 1 && <Divider />}
+        </React.Fragment>
+      ))}
+    </BeneficiosWrapper>
+  );
+}
 
 export default DetalleProducto;

@@ -70,7 +70,9 @@ export const products = [
     desc:'Acà va un texto de prueba',
     //subcategory ['AlimentoGatos', 'Alimento'],
     price: 300,
-    img:require('../../Assets/Productos/Alimentos/4.png')
+    img:require('../../Assets/Productos/Alimentos/4.png'),
+    imgDorso: require('../../Assets/Productos/Alimentos/4-D.png')
+
   },
   {
     id: 6,
