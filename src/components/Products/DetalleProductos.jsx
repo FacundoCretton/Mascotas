@@ -1,3 +1,4 @@
+// DetalleProducto.jsx
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -7,6 +8,8 @@ import CompositionTable from "./CompositionTable";
 import { ListItem, ListItemText } from "@mui/material";
 import PetsIcon from '@mui/icons-material/Pets';
 import AdditionalInfoComponent from "./AditionalInfoComponent";
+import { RiArrowLeftLine, RiArrowRightLine } from "react-icons/ri";
+import  { handleBackClick, handleForwardClick } from "./Flechas";
 
 const DetalleProducto = () => {
   const { id } = useParams();
@@ -14,11 +17,10 @@ const DetalleProducto = () => {
   const [cantidad, setCantidad] = useState(1);
   const [cantidadAdicional, setCantidadAdicional] = useState(0);
   const [inputValue, setInputValue] = useState(null);
+  const [mostrarDorso, setMostrarDorso] = useState(false);
 
   const allProducts = Object.values(productsByCategory).flat();
-
   const producto = allProducts.find((product) => product.id === parseInt(id));
-
   const specifications = useSelector((state) =>
     state.specifications.specifications[id]
   );
@@ -51,11 +53,20 @@ const DetalleProducto = () => {
   const totalPrice =
     producto.price * (cantidad === "masDe3" ? cantidadAdicional : cantidad);
 
+
   return (
     <DetallesWrapper>
       <ImageColumn>
-        <ProductImage src={producto.img} alt={producto.name} />
-        <ProductImage src={producto.imgDorso} alt={producto.name} />
+      <ProductImage
+        src={mostrarDorso ? producto.imgDorso : producto.img}
+        alt={producto.name}
+        className={`${mostrarDorso ? "rotar dorso-visible" : ""}`}
+      />
+        <div className="flechas">
+          <RiArrowLeftLine onClick={() => handleBackClick(mostrarDorso, setMostrarDorso)} />
+          <RiArrowRightLine onClick={() => handleForwardClick(mostrarDorso, setMostrarDorso)} />
+
+        </div>
       </ImageColumn>
 
       <ProductDetails>
@@ -104,7 +115,7 @@ const ListBeneficios = ({ beneficios }) => {
         <React.Fragment key={index}>
           <ListItem>
             <BeneficioIcon>
-              <PetsIcon style={{ color: "warning" }} /> {/* Cambia el color a verde */}
+              <PetsIcon style={{ color: "warning" }} />
             </BeneficioIcon>
             <ListItemText primary={beneficio} />
           </ListItem>

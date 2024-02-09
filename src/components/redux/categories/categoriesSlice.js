@@ -5,7 +5,7 @@ import { Categories } from "../../Data/Categories";
 const INITIAL_STATE = {
   categories: Categories,
   selectedCategory: null,
-  // selectedSubcategory: null,
+  selectedSubcategory: null,
 };
 
 export const categoriesSlice = createSlice({

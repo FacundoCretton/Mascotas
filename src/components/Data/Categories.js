@@ -7,17 +7,23 @@ export const Categories = [
     name: 'Todos',
     icon: <FaListUl/>,
     category: 'Todos',
+    subcategories: ['Alimentos', 'Accesorios', 'Juguetes', 'Cuchas', 'Camas', 'Rascadores'],
+
   },
   {
     id: 2,
     name: 'Perros',
     icon: <FaDog/>,
     category: 'Perros',
+    subcategories: ['Alimentos', 'Accesorios', 'Juguetes', 'Cuchas'],
+
  },
   {
     id: 3,
     name: 'Gatos',
     icon: <FaCat/>,
     category: 'Gatos',
+    subcategories: ['Alimentos', 'Accesorios', 'Juguetes', 'Camas', 'Rascadores'],
+
   },
 ];

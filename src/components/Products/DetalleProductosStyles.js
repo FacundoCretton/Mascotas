@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import Typography from '@mui/material/Typography';
 
 export const TituloH1 = styled.h1`
@@ -13,26 +13,7 @@ export const TituloH1 = styled.h1`
 //   margin: 2rem 0;
 // `;
 
-export const ProductImage = styled.img`
-  position: relative;
-  max-width: 500px;
-  max-height: 500px;
-  overflow: hidden; /* Para ocultar el desbordamiento de la lupa */
-  &:before {
-    content: "";
-    position: absolute;
-    width: 100px; /* Ancho de la lupa */
-    height: 100px; /* Altura de la lupa */
-    border: 2px solid black; /* Borde de la lupa */
-    border-radius: 50%; /* Forma redondeada */
-    background: rgba(255, 255, 255, 0.5); /* Fondo semitransparente */
-    pointer-events: none; /* Para que la lupa no interfiera con los eventos del mouse */
-    display: none; /* Inicialmente oculto */
-  }
-  &:hover:before {
-    display: block; /* Mostrar la lupa al pasar el mouse sobre la imagen */
-  }
-`;
+
 
 // export const ProductDetails = styled.div`
 //   flex-grow: 1;
@@ -186,3 +167,36 @@ export const TotalPrice = styled.p`
 
 // -------------------
 
+export const rotateAnimation = keyframes`
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
+`;
+
+export const ProductImage = styled.img`
+  position: relative;
+  max-width: 500px;
+  max-height: 500px;
+  overflow: hidden;
+  transition: transform 0.5s ease; // Transición suave para la transformación
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    display: none;
+  }
+  &:hover:before {
+    display: block;
+  }
+  &.dorso-visible {
+    transform: rotateY(180deg) scaleX(-1); // Aplicamos la transformación para mostrar el dorso y la inversión horizontal
+  }
+`;
