@@ -15,7 +15,7 @@ export const Categories = [
     name: 'Perros',
     icon: <FaDog/>,
     category: 'Perros',
-    subcategories: ['Alimentos', 'Accesorios', 'Juguetes', 'Cuchas'],
+    subcategories: ['Alimentos', 'Accesorios', 'Juguetes', 'Cuchas', 'Camas'],
 
  },
   {

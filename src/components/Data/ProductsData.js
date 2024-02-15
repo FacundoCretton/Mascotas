@@ -1,18 +1,16 @@
-import React from 'react';
-
+// Date: 15/02/24 17:36.
 export const products = [
 
   {
     id: 1,
-    name: (
-      <React.Fragment>
-        Perro adulto de raza grande <br /> <span style={{ fontSize: '0.8em' }}>PREMIUM</span>
-      </React.Fragment>
-    ),    category: 'Perros',
+    name: "Perro adulto de raza grande",
+    tags: ["PREMIUM"],    
+    category: 'Perros',
     desc:'Acà va un texto de prueba',
-    //subcategory ['AlimentoPerros', 'Alimento'],
+    subcategory: 'Alimentos',
     price: 100,
     img:require('../../Assets/Productos/Alimentos/1.png'),
+    imgDorso: require('../../Assets/Productos/Alimentos/1-D.png'),
     stock: true
 
         
@@ -20,87 +18,153 @@ export const products = [
 
   {
     id: 2,
-    name: (
-      <React.Fragment>
-        Perro adulto de raza pequeña <br /> <span style={{ fontSize: '0.8em' }}>PREMIUM</span>
-      </React.Fragment>
-    ),    category: 'Perros',
+    name: "Perro adulto de raza pequeña ",
+    tags: ["PREMIUM"],    
+    category: 'Perros',
     desc:'Acà va un texto de prueba',      
-    //subcategory ['AlimentoPerros', 'Alimento'],
+    subcategory: 'Alimentos',
     price: 200,
     img:require('../../Assets/Productos/Alimentos/2.png'),
+    imgDorso: require('../../Assets/Productos/Alimentos/2-D.png'),
     stock: true,
 
   },
 
   {
     id: 3,
-    name: (
-      <React.Fragment>
-        Gato adulto todas las razas <br /> <span style={{ fontSize: '0.8em' }}>URINARIO</span>
-      </React.Fragment>
-    ),    category: 'Gatos',
+    name: "Gato adulto todas las razas", 
+    tags:["URINARIO"],    
+    category: 'Gatos',
     desc:'Acà va un texto de prueba',
-    //subcategory ['AlimentoGatos', 'Alimento'],
+    subcategory: 'Alimentos',
     price: 300,
     img:require('../../Assets/Productos/Alimentos/101.png'),
+    imgDorso: require('../../Assets/Productos/Alimentos/101-D.png'),
     stock: true,
   },
-    {
-      id: 4,
-      name: (
-        <React.Fragment>
-          Cachorro todas las razas <br /> <span style={{ fontSize: '0.8em' }}>PREMIUM</span>
-        </React.Fragment>
-      ),      
-      category: 'Perros',
-      desc:'Acà va un texto de prueba',
-      //subcategory ['AlimentoGatos', 'Alimento'],
-      price: 300,
-      img:require('../../Assets/Productos/Alimentos/3.png')
-    },
   {
-    id: 5,
-    name: (
-      <React.Fragment>
-        Perro adulto de raza pequeña <br /> <span style={{ fontSize: '0.8em' }}>HIPOALERGÉNICO</span>
-      </React.Fragment>
-    ),    
+    id: 4,
+    name:"Cachorro todas las razas", 
+    tags:["PREMIUM"],      
     category: 'Perros',
     desc:'Acà va un texto de prueba',
-    //subcategory ['AlimentoGatos', 'Alimento'],
+    subcategory:'Alimentos',
+    price: 300,
+    img:require('../../Assets/Productos/Alimentos/3.png'),
+    stock: true,
+
+  },
+  {
+    id: 5,
+    name:"Perro adulto de raza pequeña", 
+    tags:["HIPOALERGÉNICO"],    
+    category: 'Perros',
+    desc:'Acà va un texto de prueba',
+    subcategory: 'Alimentos',
     price: 300,
     img:require('../../Assets/Productos/Alimentos/4.png'),
-    imgDorso: require('../../Assets/Productos/Alimentos/4-D.png')
+    imgDorso: require('../../Assets/Productos/Alimentos/4-D.png'),
+    stock: true,
+
 
   },
   {
     id: 6,
-    name: 'Alimento para gatos',
-    category: 'Gatos',
+    name: 'Perro adulto de raza grande',
+    tags: ["HIPOALERGÉNICO"],
+    category: 'Perros',
     desc:'Acà va un texto de prueba',
-    //subcategory ['AlimentoGatos', 'Alimento'],
+    subcategory: 'Alimentos',
     price: 300,
-    img:require('../../Assets/Productos/Alimentos/5.png')
+    img:require('../../Assets/Productos/Alimentos/5.png'),
+    imgDorso: require('../../Assets/Productos/Alimentos/5-D.png'),
+    stock: true,
+
   },
   {
     id: 7,
-    name: 'Alimento para gatos',
-    category: 'Gatos',
+    name: 'Perro adulto raza gigante',
+    tags: ["PREMIUM"],
+    category: 'Perros',
     desc:'Acà va un texto de prueba',
-    //subcategory ['AlimentoGatos', 'Alimento'],
+    subcategory:'Alimentos',
     price: 300,
-    img:require('../../Assets/Productos/Alimentos/6.png')
+    img:require('../../Assets/Productos/Alimentos/6.png'),
+    imgDorso: require('../../Assets/Productos/Alimentos/6-D.png'),
+    stock: true,
+
   },
   {
     id: 8,
-    name: 'Alimento para gatos',
+    name: 'Gato adulto todas las razas',
+    tags: ["PREMIUM"],
     category: 'Gatos',
     desc:'Acà va un texto de prueba',
-    //subcategory ['AlimentoGatos', 'Alimento'],
+    subcategory: 'Alimentos',
     price: 300,
-    img:require('../../Assets/Productos/Alimentos/7.png')
+    img:require('../../Assets/Productos/Alimentos/102.png'),
+    imgDorso: require('../../Assets/Productos/Alimentos/102-D.png'),
+    stock: true,
+
   },
+  {
+    id: 9,
+    name: 'Cachorro de raza Gigante',
+    tags: ["PREMIUM"],
+    category: 'Perros',
+    desc:'Perros que en edad adulta van a tener un peso de +40 kg',
+    subcategory: 'Alimentos',
+    price: 300,
+    img:require('../../Assets/Productos/Alimentos/7.png'),
+    imgDorso: require('../../Assets/Productos/Alimentos/7-D.png'),
+    stock: true,
+
+  },
+  {
+    id: 10,
+    name: 'PERRO ADULTO RAZA GRANDE CONTROL DE PESO',
+    tags: ["PREMIUM"],
+    category: 'Perros',
+    desc:'Perros que en edad adulta van a tener un peso de +40 kg',
+    subcategory: 'Alimentos',
+    price: 300,
+    img:require('../../Assets/Productos/Alimentos/8.png'),
+    imgDorso: require('../../Assets/Productos/Alimentos/8-D.png'),
+    stock: true,
+
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   {
@@ -108,9 +172,11 @@ export const products = [
     name: 'Cucha para perros',
     category: 'Perros',
     desc:'Acà va un texto de prueba',
-    //subcategory ['Cuchas', 'CuchasPerros'],
+    subcategory: 'Cuchas',
     price: 400,
-    img:'/animales.jpg'
+    img:'/animales.jpg',
+    stock: true,
+
   },
 
   {
@@ -118,9 +184,11 @@ export const products = [
     name: 'Cucha para gatos',
     category: 'Gatos',
     desc:'Acà va un texto de prueba',
-    //subcategory ['Cuchas', 'CuchasGatos'],
+    subcategory:'Cuchas',
     price: 500,
-    img:'/animales.jpg'
+    img:'/animales.jpg',
+    stock: true,
+
   },
 
   {
@@ -128,9 +196,11 @@ export const products = [
     name: 'Juguete para perros',
     category: 'Perros',
     desc:'Acà va un texto de prueba',
-    //subcategory ['Juguetes', 'JuguetesPerros'],
+    subcategory:'Juguetes',
     price: 600,
-    img:'/animales.jpg'
+    img:'/animales.jpg',
+    stock: true,
+
   },
 
   {
@@ -138,9 +208,11 @@ export const products = [
     name: 'Juguete para gatos',
     category: 'Gatos',
     desc:'Acà va un texto de prueba',
-    //subcategory ['Juguetes', 'JuguetesGatos'],
+    subcategory:'Juguetes',
     price: 700,
-    img:'/animales.jpg'
+    img:'/animales.jpg',
+    stock: true,
+
 
   },
 
@@ -149,9 +221,11 @@ export const products = [
     name: 'Cama para perros',
     category: 'Perros',
     desc:'Acà va un texto de prueba',
-    //subcategory ['Camas', 'CamasPerros'],
+    subcategory:'Camas', 
     price: 800,
-    img:'/animales.jpg'
+    img:'/animales.jpg',
+    stock: true,
+
   },
 
   {
@@ -159,9 +233,11 @@ export const products = [
     name: 'Cama para gatos',
     category: 'Gatos',
     desc:'Acà va un texto de prueba',
-    //subcategory ['Camas', 'CamasGatos'],
+    subcategory:'Camas',
     price: 900,
-    img:'/animales.jpg'
+    img:'/animales.jpg',
+    stock: true,
+
   },
 
   {
@@ -169,9 +245,11 @@ export const products = [
     name: 'Rascador para gatos',
     category: 'Gatos',
     desc:'Acà va un texto de prueba',
-    //subcategory ['Juguetes', 'JuguetesGatos'],
+    subcategory: 'Juguetes',
     price: 1000,
-    img:'/animales.jpg'
+    img:'/animales.jpg',
+    stock: true,
+
   },
 
   {
@@ -179,9 +257,11 @@ export const products = [
     name: 'Rascador para gatos 2',
     category: 'Gatos',
     desc:'Acà va un texto de prueba',
-    //subcategory ['Juguetes', 'JuguetesGatos' ],
+    subcategory: 'Juguetes',
     price: 1100,
-    img:'/animales.jpg'
+    img:'/animales.jpg',
+    stock: true,
+
   },
 
 
@@ -193,24 +273,7 @@ export const products = [
 ]
 
 
-// export const TotalProducts = Products.length;
 
-// export const products = Products.reduce((acc, product) => {
-//     if (!acc[product.category]) {
-//         acc[product.category] = {};
-//     }
-
-//     if (!acc[product.category][product.subcategory]) {
-//         acc[product.category][product.subcategory] = [];
-//     }
-
-//     acc[product.category][product.subcategory] = [
-//         ...acc[product.category][product.subcategory],
-//         product,
-//     ];
-
-//     return acc;
-// }, {});
 
 export const TotalProducts = products.length;
 

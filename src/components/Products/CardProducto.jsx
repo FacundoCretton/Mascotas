@@ -1,6 +1,6 @@
 import React from "react";
 import { formatPrice } from "../../utils/formatPrice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import Button from "../UI/Button/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -14,17 +14,22 @@ import {
   CardsStyle,
   ContainerPrice,
   CustomCardTitle,
+  PTag,
   StyledAccordionHeader,
 } from "./ProductsStyles";
+import { addToCart } from "../redux/cart/cartSlide";
 
-const CardProducto = ({ img, name, price, desc, id, stock }) => {
+const CardProducto = ({ img, name,tags, price, desc, id, stock }) => {
   const dispatch = useDispatch();
-
   return (
     <CardsStyle stock={stock}>
       <Card style={{ width: '23rem', background: '#f5f5f5', border: '1px solid #cccccc ', color: '#000000' }}>
         <Card.Body>
-          <CustomCardTitle>{name}</CustomCardTitle>
+          <CustomCardTitle>{name} 
+          {tags && tags.map(tag => (
+          <PTag key={tag} style={{ fontSize: '0.8em', marginLeft: '0.5rem' }}>{tag}</PTag>
+      ))}
+      </CustomCardTitle>
           <div style={{ position: "relative", textAlign: 'center' }}>
             <Card.Img variant="top" src={img} style={{ width: '120px', height: '230px' }} />
             {!stock && ( // Mostrar el texto "Sin stock" solo cuando no haya stock
@@ -62,11 +67,12 @@ const CardProducto = ({ img, name, price, desc, id, stock }) => {
             {stock ? (
               <Button
                 onClick={() =>
-                  dispatch()
+                  dispatch(addToCart({ img, name, desc, price, id} ))
+
                 }
                 disabled={!stock}
               >
-                Agregar
+                Agregar al carro
               </Button>
             ) : (
               <Button disabled ><span style={{fontWeight: '600', fontSize:'14px'}}>Sin stock</span></Button>

@@ -60,3 +60,9 @@ export const CustomCardTitle = styled(Card.Title)`
   text-align: center;
   font-weight: 600;
 `;
+
+export const PTag = styled.p `
+
+  padding-top: 5px;
+
+`;

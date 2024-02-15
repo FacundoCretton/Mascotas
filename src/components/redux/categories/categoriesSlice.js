@@ -22,9 +22,16 @@ export const categoriesSlice = createSlice({
           action.payload !== state.selectedCategory ? action.payload : null,
       };
     },
+    selectSubcategory: (state, action) => {
+      return {
+        ...state,
+        selectedSubcategory: action.payload,
+      };
+    },
+    
   },
 });
 
-export const { getCategories, selectCategory } = categoriesSlice.actions;
+export const { getCategories, selectCategory, selectSubcategory } = categoriesSlice.actions;
 
 export default categoriesSlice.reducer;

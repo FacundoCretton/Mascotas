@@ -6,14 +6,16 @@ import persistStore from 'redux-persist/es/persistStore';
 import categoriesReducer from "./categories/categoriesSlice";
 import productsReducer from "./products/productsSlice";
 import specificationsReducer from "./products/productSpecificationsSlice";
+import cartReducer from "./cart/cartSlide"
 
 
 
 const reducers = combineReducers(
     {
-        categories: categoriesReducer,
+        categories: categoriesReducer,  
         products: productsReducer,
         specifications: specificationsReducer,
+        cart: cartReducer,
 
     }
 )
@@ -21,7 +23,7 @@ const reducers = combineReducers(
 const persistConfig = {
     key: 'root',
     storage,
-    whitelist: [],
+    whitelist: ['cart'],
 }
 
 const persistedReducer = persistReducer(persistConfig, reducers)

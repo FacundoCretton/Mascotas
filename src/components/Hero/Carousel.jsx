@@ -3,7 +3,7 @@ import { Slide1, Slide2, Slide3 } from './Slides/Slide1';
 import { StyledCarousel } from './CarouselStyles';
 const Carousell =()=> {
   return (
-    <StyledCarousel fade>
+    <StyledCarousel>
       <Carousel.Item>
         <Slide1 text="First slide" />
         <Carousel.Caption>

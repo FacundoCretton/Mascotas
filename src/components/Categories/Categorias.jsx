@@ -1,6 +1,8 @@
+// Categorias.js
 import React from "react";
 import { Categoria } from "./Categoria";
 import { useDispatch, useSelector } from "react-redux";
+import { selectSubcategory } from "../redux/categories/categoriesSlice";
 import {
   ContenedorPrincipal,
   TituloProductos,
@@ -12,38 +14,41 @@ const Categorias = () => {
   const categories = useSelector((state) => state.categories.categories);
   const selectedCategory = useSelector((state) => state.categories.selectedCategory);
   const selectedSubcategory = useSelector((state) => state.categories.selectedSubcategory);
-
+  const dispatch = useDispatch();
+  
+  // Manejar el click en una subcategoría
   const handleSubcategoryClick = (subcategory) => {
-    console.log('selectedSubcategory:', selectedSubcategory);
-    console.log('Is selected:', subcategory, selectedSubcategory);
+    dispatch(selectSubcategory(subcategory));
   };
 
-  // Obtenemos las subcategorías de la categoría seleccionada
-  const subcategories =
-    categories.find((category) => category.category === selectedCategory)?.subcategories;
+  console.log('Subcategorías:', categories.find(cat => cat.category === selectedCategory)?.subcategories);
+  console.log('Subcategoría seleccionada:', selectedSubcategory);
 
   return (
     <ContenedorPrincipal>
       <TituloProductos>Nuestros productos</TituloProductos>
       <ContenedorCategorias>
         {categories.map((category) => (
-          <Categoria 
+          <Categoria
             key={category.id}
-          
-           {...category} />
+            {...category}
+          />
         ))}
       </ContenedorCategorias>
       {selectedCategory && (
-        <SubcategoriasContainer subcategories={subcategories} selected={selectedSubcategory}>
-          {subcategories?.map((subcategory) => (
-            <div
-              key={subcategory}
-              onClick={() => handleSubcategoryClick(subcategory)}
-              className={` ${subcategory === selectedSubcategory ? 'selected' : ''}`}
-            >
-              {subcategory}
-            </div>
-          ))}
+        <SubcategoriasContainer subcategories={categories.find(cat => cat.category === selectedCategory)?.subcategories} selected={selectedSubcategory}>
+
+          {categories
+            .find((cat) => cat.category === selectedCategory)
+            ?.subcategories.map((subcategory) => (
+              <div
+                key={subcategory}
+                onClick={() => handleSubcategoryClick(subcategory)}
+                className={`subcategory ${subcategory === selectedSubcategory ? 'selected' : ''}`}
+              >
+                {subcategory}
+              </div>
+            ))}
         </SubcategoriasContainer>
       )}
     </ContenedorPrincipal>

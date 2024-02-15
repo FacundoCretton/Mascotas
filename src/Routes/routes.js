@@ -4,6 +4,7 @@ import DetalleProducto from '../components/Products/DetalleProductos';
 import Carousell from '../components/Hero/Carousel';
 import CardsProductos from '../components/Products/CardsProductos';
 import Categorias from '../components/Categories/Categorias';
+import { PreguntasFrecuentes } from '../components/Faqs/PreguntasFrecuentes';
 
 
 
@@ -34,6 +35,7 @@ function Home(){
         <Carousell/>
         <Categorias/>
         <CardsProductos/>
+        <PreguntasFrecuentes/>
 
         
         </>
