@@ -11,6 +11,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import {
   ButtonContainer,
   CardPrice,
+  CardText,
   CardsStyle,
   ContainerPrice,
   CustomCardTitle,
@@ -40,11 +41,11 @@ const CardProducto = ({ img, name,tags, price, desc, id, stock }) => {
           </div>
           <Accordion>
             <Accordion.Item eventKey="0">
-              <Accordion.Header>Descripción</Accordion.Header>
+              <StyledAccordionHeader><span>Descripción</span></StyledAccordionHeader>
               <Accordion.Body>
-                <Card.Text>
+                <CardText>
                   {desc}
-                </Card.Text>
+                </CardText>
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="1">
@@ -72,7 +73,7 @@ const CardProducto = ({ img, name,tags, price, desc, id, stock }) => {
                 }
                 disabled={!stock}
               >
-                Agregar al carro
+                Agregar al Carro
               </Button>
             ) : (
               <Button disabled ><span style={{fontWeight: '600', fontSize:'14px'}}>Sin stock</span></Button>

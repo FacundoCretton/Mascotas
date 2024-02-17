@@ -200,3 +200,12 @@ export const ProductImage = styled.img`
     transform: rotateY(180deg) scaleX(-1); // Aplicamos la transformación para mostrar el dorso y la inversión horizontal
   }
 `;
+
+
+
+
+
+
+
+
+

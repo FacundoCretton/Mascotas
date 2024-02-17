@@ -2,7 +2,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Card from 'react-bootstrap/Card';
 import styled, { css } from 'styled-components';
-export const ProductosContainer = styled.div `
+export const CardProductosContainer = styled.div `
   display: grid;
   place-items: center;
   justify-content: center;
@@ -44,25 +44,54 @@ export const ContainerPrice = styled.div`
 
 export const CardPrice = styled.span`
   font-weight: 800;
-  font-size: 1.75rem;
-  background: linear-gradient(83deg, #ffa100, #fb103d);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+  color: #4caf50; /* Verde que complementa el diseño de la página */
 `;
 
+
+
 export const StyledAccordionHeader = styled(Accordion.Header)`
-  width: 150px;
+  font-family: "Noto Sans";
+  border: 1px solid #ccc; /* Cambia el color del borde para que se ajuste mejor al diseño general */
+
+  span {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: #fff; /* Cambia el color del texto cuando el acordeón está expandido */
+    background-color: #2196f3; /* Cambia el color de fondo cuando el acordeón está expandido */
+  }
+
+  .accordion-button:focus {
+    z-index: 3;
+    border-color: green; /* Cambia el color del borde cuando el acordeón tiene foco */
+    outline: 0;
+    box-shadow: var(--bs-accordion-btn-focus-box-shadow);
+  }
 `;
+
 
 export const CustomCardTitle = styled(Card.Title)`
   font-size: 18px;
   color: #333;
   text-align: center;
   font-weight: 600;
+  font-family: "Comfortaa", cursive;
 `;
 
 export const PTag = styled.p `
 
   padding-top: 5px;
+
+`;
+
+export const CardText = styled(Card.Text)`
+
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  font-family: "Noto Sans";
 
 `;

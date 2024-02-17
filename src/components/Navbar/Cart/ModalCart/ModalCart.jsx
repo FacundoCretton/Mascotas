@@ -66,11 +66,10 @@ const ModalCart = () => {
               >
                 <MdOutlineClose size='24px' />
               </CloseButtonStyled>
-            </CloseButtonContainerStyled>
-
-            <MainContainerStyled>
               <TitleStyled>
-                <h1>Tus Productos</h1>
+                <h2>Tus Productos</h2>
+              </TitleStyled>
+
                 <Increase
                   onClick={()=>dispatch(clearCart())}
                   bgColor='blue'
@@ -78,7 +77,10 @@ const ModalCart = () => {
                 >
                   <IoMdTrash />
                 </Increase>
-              </TitleStyled>
+           </CloseButtonContainerStyled>
+
+            <MainContainerStyled>
+
 
               <ProductsWrapperStyled>
                 {

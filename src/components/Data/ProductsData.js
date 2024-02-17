@@ -1,4 +1,15 @@
 // Date: 15/02/24 17:36.
+import bone from '../Products/ListProductos/icons/bones.svg'
+import hair1 from '../Products/ListProductos/icons/hair.svg'
+import energy from '../Products/ListProductos/icons/heart.svg'
+import vitalidad from '../Products/ListProductos/icons/veterinary.svg'
+
+export const beneficiosIconos = {
+  energia: energy,
+  pelos: hair1,
+  huesos: bone,
+  vitalidad: vitalidad,
+};
 export const products = [
 
   {
@@ -11,8 +22,13 @@ export const products = [
     price: 100,
     img:require('../../Assets/Productos/Alimentos/1.png'),
     imgDorso: require('../../Assets/Productos/Alimentos/1-D.png'),
-    stock: true
-
+    stock: true,
+    beneficios: [
+      { nombre: 'energia', icono: energy },
+      { nombre: 'pelos', icono: hair1 },
+      { nombre: 'huesos', icono: bone },
+      { nombre: 'vitalidad', icono: vitalidad }
+    ]
         
   },
 

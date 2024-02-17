@@ -5,6 +5,7 @@ import Carousell from '../components/Hero/Carousel';
 import CardsProductos from '../components/Products/CardsProductos';
 import Categorias from '../components/Categories/Categorias';
 import { PreguntasFrecuentes } from '../components/Faqs/PreguntasFrecuentes';
+import ListProductos from '../components/Products/ListProductos/ListProductos';
 
 
 
@@ -35,7 +36,8 @@ function Home(){
         <Carousell/>
         <Categorias/>
         <CardsProductos/>
-        <PreguntasFrecuentes/>
+        {/* <PreguntasFrecuentes/> */}
+        <ListProductos/>
 
         
         </>

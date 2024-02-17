@@ -2,16 +2,15 @@ import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components';
 
 export const NavbarContainer = styled.header`
-  background-color: rgba(107, 142, 35, 0.8);
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: rgba(67, 83, 41, 0.9);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Añade una sombra más suave */
   color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* gap: 1rem; */
-  height: 60px;
+  height: 80px; /* Ajusta la altura para dar más espacio */
   margin: auto;
-  font-family: 'Bebas Neue';
+  font-family: "Lora";
   padding: 0 2rem;
   position: sticky;
   top: 0;
@@ -19,10 +18,12 @@ export const NavbarContainer = styled.header`
 `;
 
 
+
 export const LogoStyle = styled.img`
   width: 55px;
   height: 55px;
   border-radius: 50px;
+  margin: auto;
 `;
 
 export const NavbarMenu = styled.div`
@@ -48,7 +49,7 @@ export const NavbarMenuUl = styled.ul`
         top: 60px;
         left: 0;
         width: 100%;
-        background-color: rgba(107, 142, 35, 0.8);
+        background-color: rgba(67, 83, 41, 0.9);
         flex-direction: column;
         align-items: center;
         padding: 10px 0;
@@ -70,15 +71,20 @@ export const NavbarItem = styled.li`
     align-items: center;
     justify-content: center;
 
-  a{
+    a {
     position: relative;
-    color: #fff;
     padding: 10px 15px;
     display: inline-block;
     text-decoration: none;
-  }
+    font-size: 1.2rem; /* Aumenta el tamaño del texto */
+    transition: color 0.3s ease; /* Agrega una transición de color suave */
 
+    &:hover {
+      color: #ccc; /* Cambia el color del texto al pasar el cursor */
+    }
+  }
 `;
+
 export const ModalOverlayStyled = styled(motion.div)`
   position: fixed;
   top: 0;

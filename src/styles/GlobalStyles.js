@@ -12,7 +12,7 @@ export const GlobalStyles = createGlobalStyle`
 body {
     margin: 0;
     padding: 0;
-    background: #eaeaea ;
+    background: #d3d3d3 ;
     font-family: 'Roboto';
     color: #333333;
     -webkit-tap-highlight-color: transparent;

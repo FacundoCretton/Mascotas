@@ -29,6 +29,7 @@ export const ContainerStyled = styled(motion.div)`
 export const CloseButtonContainerStyled = styled.div`
   height: 32px;
   display: flex;
+  justify-content: space-between;
 `;
 
 export const CloseButtonStyled = styled(motion.button)`

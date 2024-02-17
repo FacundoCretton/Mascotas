@@ -2,14 +2,15 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { DetallesWrapper, TituloH1, ProductImage, ProductDetails, Price, Specifications, DescriptionWrapper, DescriptionTitle, DescriptionText, BeneficiosWrapper, ImageColumn, BeneficioIcon } from "./DetalleProductosStyles";
+import { DetallesWrapper, TituloH1, ProductImage, ProductDetails, Price, Specifications, DescriptionWrapper, DescriptionTitle, DescriptionText, BeneficiosWrapper, ImageColumn, BeneficioIcon, CustomLargeImageContainer, largeImageContainerStyle, LargeImageContainerStyle } from "./DetalleProductosStyles";
 import { Divider } from "antd";
 import CompositionTable from "./CompositionTable";
 import { ListItem, ListItemText } from "@mui/material";
 import PetsIcon from '@mui/icons-material/Pets';
 import AdditionalInfoComponent from "./AditionalInfoComponent";
 import { RiArrowLeftLine, RiArrowRightLine } from "react-icons/ri";
-import  { handleBackClick, handleForwardClick } from "./Flechas";
+import  { handleBackClick, handleForwardClick } from "./Flechas";  
+
 
 const DetalleProducto = () => {
   const { id } = useParams();
@@ -55,19 +56,24 @@ const DetalleProducto = () => {
 
 
   return (
-    <DetallesWrapper>
-      <ImageColumn>
+  <DetallesWrapper>
+    <ImageColumn>
       <ProductImage
         src={mostrarDorso ? producto.imgDorso : producto.img}
         alt={producto.name}
         className={`${mostrarDorso ? "rotar dorso-visible" : ""}`}
       />
-        <div className="flechas">
-          <RiArrowLeftLine onClick={() => handleBackClick(mostrarDorso, setMostrarDorso)} />
-          <RiArrowRightLine onClick={() => handleForwardClick(mostrarDorso, setMostrarDorso)} />
 
-        </div>
-      </ImageColumn>
+
+  
+      <div className="flechas">
+        <RiArrowLeftLine onClick={() => handleBackClick(mostrarDorso, setMostrarDorso)} />
+        <RiArrowRightLine onClick={() => handleForwardClick(mostrarDorso, setMostrarDorso)} />
+      </div>
+    </ImageColumn>
+
+
+
 
       <ProductDetails>
         <TituloH1>{producto.name}</TituloH1>
