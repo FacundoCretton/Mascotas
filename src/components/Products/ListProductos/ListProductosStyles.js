@@ -31,6 +31,32 @@ export const DivDelMedio = styled.div`
   justify-content: space-between;
 `;
 
+export const BeneficioIcono = styled.img`
+  width: 60px; 
+  height: 60px;
+  border-radius: 50%;
+  border: 1px dashed black; /* Color de borde en gris claro */
+  padding: 9px;
+  margin: auto;
+  transition: transform 0.3s, background-color 0.3s; /* Agrega una transición suave */
+
+  &svg{
+    padding: 25px;
+  }
+  &:hover {
+    transform: scale(1.1);
+    background-color: #f0f0f0; /* Color de fondo en gris claro más claro */
+    border-color: #999; /* Color de borde más oscuro en hover */
+  }
+`;
+
+export const ElBeneficio = styled.div`
+  text-align: center; /* Centra el contenido horizontalmente */
+  margin-top: 10px; /* Espacio entre beneficios */
+`;
+
+
+
 export const ProductName = styled.h3`
   color: #333;
   margin-bottom: 10px;

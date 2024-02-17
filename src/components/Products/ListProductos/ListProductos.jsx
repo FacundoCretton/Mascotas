@@ -10,6 +10,8 @@ import {
   ProductListImage,
   DivDeArriba,
   DivDelMedio,
+  BeneficioIcono,
+  ElBeneficio,
 } from "./ListProductosStyles";
 import { formatPrice } from "../../../utils/formatPrice";
 import Button from "../../UI/Button/Button";
@@ -29,10 +31,10 @@ const ListProductos = ({ img, name,tags, price, desc, id, stock, beneficios}) =>
         <ProductDescription>{desc}</ProductDescription>
         <div>
           {beneficios && beneficios.map(beneficio => (
-            <div key={beneficio.nombre}>
-              <img src={beneficio.icono} alt={beneficio.nombre} />
+            <ElBeneficio key={beneficio.nombre}>
+              <BeneficioIcono src={beneficio.icono} alt={beneficio.nombre} />
               <span>{beneficio.nombre}</span>
-            </div>
+            </ElBeneficio>
           ))}
         </div>
       </DivDelMedio>

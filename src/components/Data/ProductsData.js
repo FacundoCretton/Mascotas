@@ -1,14 +1,16 @@
 // Date: 15/02/24 17:36.
 import bone from '../Products/ListProductos/icons/bones.svg'
-import hair1 from '../Products/ListProductos/icons/hair.svg'
+import hair1 from '../Products/ListProductos/icons/hair.ico'
 import energy from '../Products/ListProductos/icons/heart.svg'
 import vitalidad from '../Products/ListProductos/icons/veterinary.svg'
-
+import intestinal from '../Products/ListProductos/icons/bowels.svg'
+import stomach from '../Products/ListProductos/icons/stomach.png'
 export const beneficiosIconos = {
   energia: energy,
   pelos: hair1,
   huesos: bone,
   vitalidad: vitalidad,
+  intestinal: stomach
 };
 export const products = [
 
@@ -24,10 +26,10 @@ export const products = [
     imgDorso: require('../../Assets/Productos/Alimentos/1-D.png'),
     stock: true,
     beneficios: [
-      { nombre: 'energia', icono: energy },
-      { nombre: 'pelos', icono: hair1 },
-      { nombre: 'huesos', icono: bone },
-      { nombre: 'vitalidad', icono: vitalidad }
+      { nombre: 'Energia y Vitalidad', icono: energy },
+      { nombre: 'Pelo Brillante', icono: hair1 },
+      { nombre: 'Huesos Fuertes', icono: bone },
+      { nombre: 'Salud Intestinal', icono: stomach }
     ]
         
   },
