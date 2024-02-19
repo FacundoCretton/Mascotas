@@ -28,7 +28,7 @@ export const DivDeArriba = styled.div`
 export const DivDelMedio = styled.div`
 
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 `;
 
 export const BeneficioIcono = styled.img`
@@ -110,3 +110,17 @@ export const ProductListImage = styled.img`
 `;
 
 
+
+
+export const AirtonSenna = styled.div`
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  gap: 20px;
+  text-align: center;
+  align-items: center;
+
+`;

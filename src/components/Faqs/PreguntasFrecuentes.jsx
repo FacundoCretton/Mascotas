@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import FaqsData from "../Data/Faqs";
-import { Container, CategoryHeader, QuestionContent, QuestionHeader, AccordionContent } from "./PreguntasFrecuentesStyles";
+import { Container, CategoryHeader, QuestionContent, QuestionHeader, AccordionContent, Answer, AnswerContainer } from "./PreguntasFrecuentesStyles";
 import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
 import { motion } from "framer-motion";
 
@@ -37,7 +37,8 @@ export const PreguntasFrecuentes = () => {
                         {activeQuestionIndex === questionIndex ? <RiArrowUpSLine /> : <RiArrowDownSLine />}
                       </QuestionHeader>
                       {activeQuestionIndex === questionIndex && (
-                        <p>{pregunta.respuesta}</p>
+                        <AnswerContainer
+                        ><Answer>{pregunta.respuesta}</Answer></AnswerContainer>
                       )}
                     </QuestionContent>
                   ))}

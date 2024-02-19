@@ -64,7 +64,6 @@ export const NavbarMenuUl = styled.ul`
 `;
 
 export const NavbarItem = styled.li`
-
     display: flex;
     margin: auto;
     padding: 0px 20px;
@@ -72,17 +71,19 @@ export const NavbarItem = styled.li`
     justify-content: center;
 
     a {
-    position: relative;
-    padding: 10px 15px;
-    display: inline-block;
-    text-decoration: none;
-    font-size: 1.2rem; /* Aumenta el tamaño del texto */
-    transition: color 0.3s ease; /* Agrega una transición de color suave */
+        position: relative;
+        padding: 10px 15px;
+        display: inline-block;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: color 0.3s ease;
 
-    &:hover {
-      color: #ccc; /* Cambia el color del texto al pasar el cursor */
+        &:hover {
+            color: #ccc;
+            background-color: rgba(255, 255, 255, 0.1); /* Agrega un color de fondo al pasar el cursor */
+            border-radius: 5px; /* Redondea los bordes */
+        }
     }
-  }
 `;
 
 export const ModalOverlayStyled = styled(motion.div)`

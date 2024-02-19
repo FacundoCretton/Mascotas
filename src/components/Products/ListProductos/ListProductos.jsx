@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cart/cartSlide";
 import {
@@ -7,36 +7,46 @@ import {
   ProductDescription,
   ProductPrice,
   OutOfStockMessage,
-  ProductListImage,
   DivDeArriba,
   DivDelMedio,
   BeneficioIcono,
   ElBeneficio,
+  AirtonSenna,
 } from "./ListProductosStyles";
 import { formatPrice } from "../../../utils/formatPrice";
 import Button from "../../UI/Button/Button";
 import { ButtonContainer } from "../ProductsStyles";
 import { LiaBoneSolid } from "react-icons/lia";
+import ProductImageComponent from "../../UI/ProductImageComponent/ProductImageComponent";
 
 
-const ListProductos = ({ img, name,tags, price, desc, id, stock, beneficios}) => {
+const ListProductos = ({ img, name,tags, price, desc, id, stock, beneficios, imgDorso}) => {
   const dispatch = useDispatch();
 
-  
+  const [mostrarDorso, setMostrarDorso] = useState(false);
+
+  const toggleMostrarDorso = (mostrar) => {
+    setMostrarDorso(mostrar);
+  };
   return (
     <ListItem>
         <DivDeArriba><ProductName>{name}</ProductName></DivDeArriba>
         <DivDelMedio>
-        <ProductListImage src={img} alt={name} />
+        <ProductImageComponent
+        src={mostrarDorso ? imgDorso : img}
+        alt={name}
+        mostrarDorso={mostrarDorso}
+        onToggleDorso={toggleMostrarDorso}
+      />
+        <AirtonSenna>
         <ProductDescription>{desc}</ProductDescription>
-        <div>
           {beneficios && beneficios.map(beneficio => (
             <ElBeneficio key={beneficio.nombre}>
               <BeneficioIcono src={beneficio.icono} alt={beneficio.nombre} />
               <span>{beneficio.nombre}</span>
             </ElBeneficio>
           ))}
-        </div>
+        </AirtonSenna>
       </DivDelMedio>
         <ProductPrice>{formatPrice(price)}</ProductPrice>
       {stock ? (
@@ -48,7 +58,6 @@ const ListProductos = ({ img, name,tags, price, desc, id, stock, beneficios}) =>
       ) : (
         <OutOfStockMessage>Sin stock</OutOfStockMessage>
       )}
-      <LiaBoneSolid/>
 
     </ListItem>
   );

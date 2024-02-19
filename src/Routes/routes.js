@@ -36,8 +36,7 @@ function Home(){
         <Carousell/>
         <Categorias/>
         <CardsProductos/>
-        {/* <PreguntasFrecuentes/> */}
-        <ListProductos/>
+        <PreguntasFrecuentes/> 
 
         
         </>
