@@ -16,7 +16,6 @@ import {
 import { formatPrice } from "../../../utils/formatPrice";
 import Button from "../../UI/Button/Button";
 import { ButtonContainer } from "../ProductsStyles";
-import { LiaBoneSolid } from "react-icons/lia";
 import ProductImageComponent from "../../UI/ProductImageComponent/ProductImageComponent";
 
 

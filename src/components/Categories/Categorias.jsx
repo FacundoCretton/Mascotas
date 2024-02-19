@@ -15,14 +15,12 @@ const Categorias = () => {
   const selectedCategory = useSelector((state) => state.categories.selectedCategory);
   const selectedSubcategory = useSelector((state) => state.categories.selectedSubcategory);
   const dispatch = useDispatch();
-  
+
   // Manejar el click en una subcategoría
   const handleSubcategoryClick = (subcategory) => {
-    dispatch(selectSubcategory(subcategory));
+    dispatch(selectSubcategory(subcategory)); // Enviar el objeto completo de la subcategoría
   };
-
-  console.log('Subcategorías:', categories.find(cat => cat.category === selectedCategory)?.subcategories);
-  console.log('Subcategoría seleccionada:', selectedSubcategory);
+  
 
   return (
     <ContenedorPrincipal>
@@ -42,15 +40,17 @@ const Categorias = () => {
             .find((cat) => cat.category === selectedCategory)
             ?.subcategories.map((subcategory) => (
               <div
-                key={subcategory}
-                onClick={() => handleSubcategoryClick(subcategory)}
-                className={`subcategory ${subcategory === selectedSubcategory ? 'selected' : ''}`}
+                key={subcategory.id}
+                onClick={() => handleSubcategoryClick(subcategory)} // Enviamos el objeto completo de la subcategoría
+                className={`subcategory ${subcategory.id === selectedSubcategory?.id ? 'selected' : ''}`} // Comparamos por el ID de la subcategoría
               >
-                {subcategory}
+                {subcategory.name}
               </div>
             ))}
         </SubcategoriasContainer>
       )}
+
+      {/* Aquí puedes agregar el código para el filtrado de productos si es necesario */}
     </ContenedorPrincipal>
   );
 };

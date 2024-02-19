@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import CardProducto from "./CardProducto";
 import ListProductos from "./ListProductos/ListProductos";
 import Button1 from "../UI/Button/Button";
@@ -13,7 +13,6 @@ const CardsProductos = () => {
   const [viewType, setViewType] = useState("cards");
   const selectedCategory = useSelector(state => state.categories.selectedCategory);
   const products = useSelector(state => state.products.products);
-  const dispatch = useDispatch();
 
   const toggleView = () => {
     setViewType(prevType => (prevType === "cards" ? "list" : "cards"));
