@@ -48,27 +48,34 @@ export const CardCategoria = styled.div`
   }
 `;
 
-
 export const SubcategoriasContainer = styled.div`
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
 
-  div {
+  .subcategory {
     cursor: pointer;
     padding: 8px 15px;
     margin: 0 5px;
     border-radius: 20px;
-    background-color: ${({ selected }) => (selected ? '#FFCC80' : '#81D4FA')}; /* Colores actualizados */
-    color: ${({ selected }) => (selected ? '#fff' : '#333')};
+    background-color: #81D4FA;
+    color: #333;
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: ${({ selected }) => (selected ? '#E57373' : '#AED581')}; /* Colores actualizados */
+      background-color: #4FC3F7;
+    }
+  }
+
+  .selected {
+    background-color: #FFCC80;
+    color: #fff;
+
+    &:hover {
+      background-color: #FFB74D;
     }
   }
 `;
-
 
 export const CategoryIcon = styled.div`
   font-size: 23px;

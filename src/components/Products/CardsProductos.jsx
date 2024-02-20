@@ -13,6 +13,8 @@ const CardsProductos = () => {
   const [viewType, setViewType] = useState("cards");
   const selectedCategory = useSelector(state => state.categories.selectedCategory);
   const products = useSelector(state => state.products.products);
+  const selectedSubcategory = useSelector(state => state.categories.selectedSubcategory);
+
 
   const toggleView = () => {
     setViewType(prevType => (prevType === "cards" ? "list" : "cards"));
@@ -20,12 +22,22 @@ const CardsProductos = () => {
 
   useEffect(() => {
     setLimit(INITIAL_LIMIT);
-  }, [selectedCategory]);
+  }, [selectedCategory, selectedSubcategory]);
 
 
-  const filteredProducts = selectedCategory && selectedCategory !== "Todos"
-    ? products[selectedCategory]
-    : Object.values(products).flatMap(product => product);
+  const filteredProducts =
+  selectedCategory && selectedCategory !== "Todos"
+    ? selectedSubcategory
+      ? products[selectedCategory].filter(
+          (product) => product.subcategory === selectedSubcategory.name
+        )
+      : products[selectedCategory]
+    : selectedSubcategory
+      ? Object.values(products).flatMap((product) =>
+          product.filter((p) => p.subcategory === selectedSubcategory.name)
+        )
+      : Object.values(products).flatMap((product) => product);
+
 
   const visibleProducts = filteredProducts.slice(0, limit);
 
@@ -36,6 +48,7 @@ const CardsProductos = () => {
   const handleLoadLessClick = () => {
     setLimit(INITIAL_LIMIT);
   };
+
 
   return (
     <>
