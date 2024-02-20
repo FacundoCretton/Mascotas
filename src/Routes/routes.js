@@ -6,6 +6,7 @@ import CardsProductos from '../components/Products/CardsProductos';
 import Categorias from '../components/Categories/Categorias';
 import { PreguntasFrecuentes } from '../components/Faqs/PreguntasFrecuentes';
 import ListProductos from '../components/Products/ListProductos/ListProductos';
+import ContactSection from '../components/Contact/ContactSection';
 
 
 
@@ -37,6 +38,7 @@ function Home(){
         <Categorias/>
         <CardsProductos/>
         <PreguntasFrecuentes/> 
+        <ContactSection/>
 
         
         </>

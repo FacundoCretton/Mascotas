@@ -6,7 +6,7 @@ import Carousel from 'react-bootstrap/Carousel'
 export const StyledCarousel = styled(Carousel)`
 
 
-    max-width: 800px;
+    width: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
