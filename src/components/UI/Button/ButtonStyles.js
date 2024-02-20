@@ -2,7 +2,7 @@ import { css, styled } from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const StyledButton = styled(motion.button)`
-    padding: 0.5rem 1rem;
+    /* padding: 0.5rem 1rem; */
     border-radius: ${({ radius }) => `${radius}px`};
     outline: none;
     border: none;
@@ -31,4 +31,5 @@ export const StyledButton = styled(motion.button)`
             background-color: #388e3c;
         }
     `}
+    
 `;

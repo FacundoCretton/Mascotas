@@ -13,8 +13,8 @@ export const ContainerStyled = styled(motion.div)`
   gap: 30px;
 
   width: 450px;
-  height: calc(100vh - 4rem);
-
+  /* height: calc(100vh - 4rem); */
+  height: auto;
   padding: 2rem;
   background-color: #6B8E23CC;
   border-radius: 0 0 0 1rem;

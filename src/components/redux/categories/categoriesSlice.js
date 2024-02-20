@@ -1,12 +1,13 @@
+// categoriesSlice.js
 import { createSlice } from "@reduxjs/toolkit";
 import { Categories } from "../../Data/Categories";
 
 const INITIAL_STATE = {
   categories: Categories,
-  selectedCategory: null,
-  selectedSubcategory: {},
+  selectedCategory: "Todos",
+  selectedSubcategory: null,
+  precioSortOrder: "asc", // Agregamos el estado para el orden de precios
 };
-
 
 export const categoriesSlice = createSlice({
   name: "categories",
@@ -28,10 +29,15 @@ export const categoriesSlice = createSlice({
         selectedSubcategory: action.payload,
       };
     },
+    togglePrecioSortOrder: (state) => {
+      return {
+        ...state,
+        precioSortOrder: state.precioSortOrder === "asc" ? "desc" : "asc",
+      };
+    },
   },
 });
 
-export const { getCategories, selectCategory, selectSubcategory } =
-  categoriesSlice.actions;
+export const { getCategories, selectCategory, selectSubcategory, togglePrecioSortOrder } = categoriesSlice.actions;
 
 export default categoriesSlice.reducer;

@@ -37,6 +37,8 @@ export const ButtonContainer = styled.div`
   align-items: center;
 `;
 
+
+
 export const ContainerPrice = styled.div`
   display: flex;
   justify-content: space-around;
@@ -93,5 +95,24 @@ export const CardText = styled(Card.Text)`
   text-align: center;
   margin: 0;
   font-family: "Noto Sans";
+
+`;
+
+
+export const LoadButtonContainer = styled.div`
+  display: flex;
+  gap: 50px;
+  padding: 2rem 0 5rem;
+  width: 100%;
+  justify-content: space-evenly;
+  
+
+
+`;
+
+export const FiltersIconsProducts = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 15px;
 
 `;
