@@ -1,4 +1,5 @@
 // ContactStyles.js
+import { FaFacebook } from 'react-icons/fa';
 import styled from 'styled-components';
 
 export const ContactWrapper = styled.section`
@@ -75,7 +76,60 @@ export const SubmitButton = styled.button`
 
 export const IconsContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  font-size: 50px;
+
+`;
+export const Icon = styled.div`
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+ 
+
+  &:hover {
+    transform: scale(1.1); /* Aumenta el tamaño del ícono al hacer hover */
+  }
+
+  /* Estilos específicos para cada ícono */
+  /* Estilos específicos para cada ícono */
+  &:hover .fa-facebook {
+    background-color: #fff;
+    /* background: linear-gradient(to right, #3b5998, #4267B2); Gradient de Facebook */
+    border-radius: 50%;
+    width:50px;
+    height:50px;
+    text-align: center;
+    border-radius: 41%;
+    color:  #3b5998;
+    font-size: 20px;
+    box-shadow: 0px 3px 10px rgba(0,0,0,.25); /* Añade una sombra para darle más profundidad */
+  }
+
+  &:hover .fa-instagram {
+    
+    width:50px;
+    height:50px;
+    text-align: center;
+    border-radius: 41%;
+    color: #fff;
+    font-size: 20px;
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+  }
+
+  &:hover .fa-whatsapp {
+      background: linear-gradient(to right, #25d366, #128c7e); /* Gradient de WhatsApp */
+      border-radius: 50%;
+      box-shadow: 0px 3px 10px rgba(0,0,0,.25); /* Añade una sombra para darle más profundidad */
+      color: #fff;
+      border: 1px solid #fff;
+    }
+  
+  `;
+export const FacebookIcon = styled(FaFacebook)`
+  color: white; /* Color blanco para el ícono */
+  font-size: 20px;
 `;
 export const ContactContainer = styled.div`
   display: flex;
@@ -198,4 +252,14 @@ export const InputWrapper = styled.div`
   position: relative;
   display: flex;
   align-items: center;
+`;
+
+
+export const InformacionContacto = styled.div`
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+
 `;

@@ -1,7 +1,7 @@
 // ContactComponents.js
 import React, { useState } from 'react';
-import { FormContact, FormContainer, IconsContainer, Input, InputStyled, InputWrapper, Label, MapContainer, MessageForm, SubmitButton, TextArea, TextAreaStyled } from './ContactStyles';
-import { FaUser, FaEnvelope, FaPencilAlt } from 'react-icons/fa'; // Importa los iconos
+import { FormContact, FormContainer, Icon, IconsContainer, Input, InputStyled, InputWrapper, Label, MapContainer, MessageForm, SubmitButton, TextArea, TextAreaStyled } from './ContactStyles';
+import { FaUser, FaEnvelope, FaPencilAlt, FaPhone, FaMapMarker, FaInstagram, FaFacebook, FaWhatsapp } from 'react-icons/fa'; // Importa los iconos
 
 export const ContactForm = () => {
     const [name, setName] = useState('');
@@ -63,10 +63,10 @@ export const Map = () => {
 export const ContactIcons = () => {
   return (
     <IconsContainer>
-      {/* Agrega aquí los iconos de teléfono, correo electrónico y dirección */}
-      <i className="fa fa-phone"></i>
-      <i className="fa fa-envelope"></i>
-      <i className="fa fa-map-marker"></i>
+
+      <Icon><FaInstagram className='fa-instagram' /></Icon>
+      <Icon><FaFacebook className='fa-facebook'/></Icon>
+      <Icon><FaWhatsapp className='fa-whatsapp'/></Icon>
     </IconsContainer>
   );
 };

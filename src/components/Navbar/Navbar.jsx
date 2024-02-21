@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <NavbarContainer>
       <ModalCart />
-      <LogoStyle src="/Messi.webp" alt="logo" />
+      <LogoStyle src="/Logo_81.png" alt="logo" />
       <NavbarMenuUl isOpen={isMenuOpen}> 
         <NavbarItem>
           <a href="/">Home</a>

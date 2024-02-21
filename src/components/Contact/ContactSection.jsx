@@ -1,7 +1,7 @@
 // ContactSection.js
 import React from 'react';
 import { ContactForm, Map, ContactIcons } from './ContactComponent';
-import { ContactContainer, ContactFormContainer, ContactWrapper, Description, FilaSuperior, MapContainer, Title, TitleBackground, TitleSection } from './ContactStyles';
+import { ContactContainer, ContactFormContainer, ContactWrapper, Description, FilaSuperior, InformacionContacto, MapContainer, Title, TitleBackground, TitleSection } from './ContactStyles';
 import { FaEnvelope } from 'react-icons/fa';
 
 
@@ -17,18 +17,22 @@ const ContactSection = () => {
       <ContactContainer>
 
         
-        <ContactFormContainer>
-            
-            <TitleBackground><Title><FaEnvelope style={{ marginRight: '5px' }} />
-                Contáctanos</Title>
-            </TitleBackground>
-          <ContactForm />
-        </ContactFormContainer>
+        <InformacionContacto>
+            <h2>Información de contacto</h2>
+
+
+        </InformacionContacto>
         
       </ContactContainer>
       <MapContainer>
-        <Map />
         
+        <ContactFormContainer>
+            
+            <TitleBackground><Title><FaEnvelope style={{ marginRight: '5px' }} />
+            Escribinos!</Title>
+            </TitleBackground>
+          <ContactForm />
+        </ContactFormContainer>
         
         <ContactIcons />
       </MapContainer>

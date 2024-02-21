@@ -8,7 +8,7 @@ export const CardProductosContainer = styled.div `
   justify-content: center;
   grid-template-columns: repeat(auto-fit, 400px);
   row-gap: 3.5rem;
-  width: 100%;
+  max-width:1200px ;
   padding: 1rem 0;
 `;
 
@@ -114,5 +114,13 @@ export const FiltersIconsProducts = styled.div`
   display: flex;
   align-items: center;
   gap: 15px;
+  justify-content: center;
+
+`;
+
+
+export const SectionProductosContainer = styled.section`
+
+  max-width: 1200px;
 
 `;

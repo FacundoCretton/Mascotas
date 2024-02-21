@@ -20,9 +20,9 @@ export const NavbarContainer = styled.header`
 
 
 export const LogoStyle = styled.img`
-  width: 55px;
-  height: 55px;
-  border-radius: 50px;
+  width: 120px;
+  height: 85px;
+  /* border-radius: 50px; */
   margin: auto;
 `;
 
