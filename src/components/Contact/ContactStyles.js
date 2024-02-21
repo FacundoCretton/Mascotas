@@ -55,23 +55,9 @@ export const FormContainer = styled.div`
   
 `;
 
-export const Input = styled.input`
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-`;
 
-export const TextArea = styled.textarea`
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-`;
+
+
 
 export const SubmitButton = styled.button`
   background-color: #007bff;
@@ -135,4 +121,81 @@ export const TitleSection = styled.h2`
   font-family: "Comfortaa";
 
 
+`;
+
+export const InputStyled = styled.input`
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: none;
+  border-bottom: 2px solid #ccc; /* Borde inferior */
+  outline: none; /* Quita el contorno al hacer clic */
+  background-color: transparent; /* Hace el input transparente */
+  padding-bottom: 5px; /* Espacio entre el texto y el borde inferior */
+
+  &:focus {
+    border-bottom: 2px solid #007bff; /* Color azul al seleccionar */
+  }
+
+  &:focus + label {
+    transform: translateY(-20px);
+    font-size: 12px;
+    color: #007bff; /* Color azul al seleccionar */
+  }
+`;
+export const Label = styled.label`
+  position: absolute;
+  top: ${({ hasValue }) => (hasValue ? '-1px' : '20px')}; /* Cambia la posición dependiendo de si hay un valor en el input */
+  left: 11%;
+  transform: translateY(-40%);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  font-size: ${({ hasValue }) => (hasValue ? '12px' : '14px')}; /* Ajusta el tamaño del texto */
+  color: ${({ hasValue }) => (hasValue ? '#aaa' : '#aaa')}; /* Cambia el color del texto */
+
+  font-family: "Noto Sans";
+  
+
+  /* Cuando el input tiene el foco o tiene valor */
+  & + ${InputStyled}:focus ~ &,
+  & + ${InputStyled}:not(:placeholder-shown) ~ & {
+    top: 15px; /* Mueve el texto arriba */
+    font-size: 12px; /* Tamaño más pequeño */
+    color: #007bff; /* Color del texto enfocado */
+  }
+`;
+
+export const TextAreaStyled = styled.textarea`
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: none;
+  border-bottom: 2px solid #ccc; /* Borde inferior */
+  outline: none; /* Quita el contorno al hacer clic */
+  background-color: transparent; /* Hace el textarea transparente */
+  padding-bottom: 5px; /* Espacio entre el texto y el borde inferior */
+  resize: none; /* Evita que se redimensione */
+  font-family: "Noto Sans";
+
+  &:focus {
+    border-bottom: 2px solid #007bff; /* Color azul al seleccionar */
+  }
+
+  &:focus + label {
+    transform: translateY(-20px);
+    font-size: 12px;
+    color: #007bff; /* Color del texto enfocado */
+    top: 10px; /* Ajusta la altura cuando el textarea está activo */
+  }
+`;
+
+
+export const InputWrapper = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
 `;
