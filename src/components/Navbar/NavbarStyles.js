@@ -1,16 +1,20 @@
 import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components';
-
+// rgba(67, 83, 41, 0.9)
 export const NavbarContainer = styled.header`
-  background-color: rgba(67, 83, 41, 0.9);
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Añade una sombra más suave */
-  color: #fff;
+  /* background-color:#ffd700 ; */
+
+  background-color: ${({ isTransparent }) => (isTransparent ?"#b2d9f0" 
+  :
+  "rgba(173, 216, 230, 0.4)" )};
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px; /* Ajusta la altura para dar más espacio */
+  height: 80px;
   margin: auto;
-  font-family: "Lora";
+  font-family: "Poppins";
+  font-weight: 600;
   padding: 0 2rem;
   position: sticky;
   top: 0;
@@ -20,7 +24,7 @@ export const NavbarContainer = styled.header`
 
 
 export const LogoStyle = styled.img`
-  width: 120px;
+  width: 100px;
   height: 85px;
   /* border-radius: 50px; */
   margin: auto;
@@ -70,21 +74,26 @@ export const NavbarItem = styled.li`
     align-items: center;
     justify-content: center;
 
-    a {
+    span {
         position: relative;
         padding: 10px 15px;
         display: inline-block;
         text-decoration: none;
-        font-size: 1.2rem;
-        transition: color 0.3s ease;
+        font-size: 1rem;
+        color:${({ isTransparent }) => (isTransparent ?"#f2f2f2":"#777" )};        
+        transition: color 0.6s ease, background-color 0.3s ease;
 
         &:hover {
-            color: #ccc;
-            background-color: rgba(255, 255, 255, 0.1); /* Agrega un color de fondo al pasar el cursor */
-            border-radius: 5px; /* Redondea los bordes */
+            color: ${({ isTransparent }) => (isTransparent ? "white" : "#ffd700 ")};
+            background-color: ${({ isTransparent }) =>
+                isTransparent ? "rgba(255, 255, 255, 0.3)" : "rgba(255, 255, 255, 0.3)"};
+            border-radius: 5px;
         }
     }
 `;
+
+
+
 
 export const ModalOverlayStyled = styled(motion.div)`
   position: fixed;
@@ -185,10 +194,10 @@ export const ActiveButton = css`
   }
 `;
 
-export const CustomButton = styled.button`
-  ${ButtonBase}
-  ${props => props.isActive && ActiveButton}
-`;
+// export const CustomButton = styled.button`
+//   ${ButtonBase}
+//   ${props => props.isActive && ActiveButton}
+// `;
 
 export const BarrsMenu = styled.div`
   display: none;

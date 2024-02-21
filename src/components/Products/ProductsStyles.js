@@ -121,6 +121,16 @@ export const FiltersIconsProducts = styled.div`
 
 export const SectionProductosContainer = styled.section`
 
-  max-width: 1200px;
+  max-width: 1200px ;
+  width: 100%;
+  background-image: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("/Background111.png");
+  background-repeat:repeat;
+  background-size: 100% auto; /* Ajuste de la propiedad background-size */
+
 
 `;

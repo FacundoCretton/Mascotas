@@ -8,6 +8,9 @@ import {
   TituloProductos,
   ContenedorCategorias,
   SubcategoriasContainer,
+  TextoIntroductorio,
+  TextoIntroductorioContainer,
+  SpanText,
 } from "./CategoriasStyles";
 
 const Categorias = () => {
@@ -17,13 +20,17 @@ const Categorias = () => {
   const dispatch = useDispatch();
 
   const handleSubcategoryClick = (subcategory) => {
-    console.log("Subcategoría seleccionada:", subcategory); // Agregamos un log aquí
     dispatch(selectSubcategory(subcategory));
   };
 
   return (
-    <ContenedorPrincipal>
+    <ContenedorPrincipal id="productos">
       <TituloProductos>Nuestros productos</TituloProductos>
+      <TextoIntroductorioContainer>
+      <TextoIntroductorio>
+        Descubre nuestros productos de alta calidad para tus <SpanText>mascotas</SpanText>.
+      </TextoIntroductorio>
+      </TextoIntroductorioContainer>
       <ContenedorCategorias>
         {categories.map((category) => (
           <Categoria

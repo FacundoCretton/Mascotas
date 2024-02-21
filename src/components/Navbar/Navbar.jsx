@@ -1,39 +1,54 @@
-import React, { useState } from "react";
-import { NavbarContainer, LogoStyle,  NavbarMenuUl, NavbarItem, BarrsMenu, CartStyled, CustomButton } from "./NavbarStyles";
+import React, { useState, useEffect, useRef } from "react";
+import { NavbarContainer, LogoStyle, NavbarMenuUl, NavbarItem, BarrsMenu, CartStyled } from "./NavbarStyles";
 import { GiHamburgerMenu } from "react-icons/gi";
 import CartIcon from "./Cart/CartIcon";
 import ModalCart from "./Cart/ModalCart/ModalCart";
 
-
 const Navbar = () => {
-
-
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isTransparent, setIsTransparent] = useState(true);
+  const navbarRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const shouldBeTransparent = scrollTop === 0;
+      setIsTransparent(shouldBeTransparent);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handleMenuClick = () => {
     setMenuOpen(!isMenuOpen);
   };
 
+  const handleNavigation = (target) => {
+    const offset = navbarRef.current.offsetHeight + 1; // Altura de la barra de navegación + 80px adicionales
+    const element = document.querySelector(target);
+    const y = element.getBoundingClientRect().top + window.scrollY - offset;
 
+    window.scrollTo({ top: y, behavior: 'smooth' });
+    setMenuOpen(false); // Cerrar el menú después de hacer clic en un enlace
+  };
 
   return (
-    <NavbarContainer>
+    <NavbarContainer ref={navbarRef} isTransparent={isTransparent}>
       <ModalCart />
       <LogoStyle src="/Logo_81.png" alt="logo" />
       <NavbarMenuUl isOpen={isMenuOpen}> 
-        <NavbarItem>
-          <a href="/">Home</a>
+        <NavbarItem isTransparent={isTransparent} onClick={() => handleNavigation("#productos")}>
+          <span>Productos</span>
         </NavbarItem>
-        <NavbarItem>
-          <a href="#productos">Productos</a>
+        <NavbarItem isTransparent={isTransparent} onClick={() => handleNavigation("#about")}>
+        <span>Conocenos</span>
         </NavbarItem>
-        <NavbarItem>
-          <a href="#about">Conocenos</a>
+        <NavbarItem isTransparent={isTransparent} onClick={() => handleNavigation("#contacto")}>
+        <span> Contactanos</span>
         </NavbarItem>
-        <NavbarItem>
-          <a href="#contact">Contactanos</a>
-        </NavbarItem>
-
       </NavbarMenuUl>
       <CartStyled>
         <CartIcon />

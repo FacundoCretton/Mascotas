@@ -6,40 +6,51 @@ import Carousel from 'react-bootstrap/Carousel'
 export const StyledCarousel = styled(Carousel)`
 
 
-    width: 70%;
+    width: 100%;
+    height: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 30px auto;
     
     .carousel-item {
-    height: 400px;
-    border-radius: 15px;
+    height: 450px;
+    /* border-radius: 15px; */
     overflow: hidden; 
+    position: relative;
 
-  }
+    }
 
-    img {
-   
-    height: 100%; 
-    object-fit: cover; 
-    
-  }
-  &.no-width img {
+
+  /* &.no-width img {
     width: auto;
-  }
+  } */
 
 
   h3{
-    color: black;
+    color: #fefefe;
+    font-family:"Comfortaa";
 
   }
 
   p{
-    color: black;
+    color: white;
+    font-family:"Noto Sans";
 
 
   }
 `;
 
 
+export const ImgSlide = styled.img`
+
+  width: 100%;
+  height: 100%;
+
+`;
+
+export const CaptionBackground = styled.div`
+  background-color: rgba(0, 0, 0, 0.5); /* Color de fondo semitransparente */
+  padding: 10px; /* Ajusta el espaciado dentro del fondo */
+  border-radius: 5px; /* Añade bordes redondeados para suavizar los bordes */
+`;

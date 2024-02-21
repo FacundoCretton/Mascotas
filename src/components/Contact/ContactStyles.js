@@ -9,7 +9,9 @@ export const ContactWrapper = styled.section`
   padding: 40px;
   background-color: #f9f9f9;
   margin-bottom: 100px;
-  border: 1px solid blue;
+  border: 1.8px solid #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
 `;
 export const FilaSuperior = styled.div`
   grid-column: 1 / span 3;
@@ -77,7 +79,7 @@ export const SubmitButton = styled.button`
 export const IconsContainer = styled.div`
   display: flex;
   justify-content: space-around;
-  font-size: 50px;
+  font-size: 30px;
 
 `;
 export const Icon = styled.div`
@@ -95,24 +97,18 @@ export const Icon = styled.div`
   &:hover .fa-facebook {
     background-color: #fff;
     /* background: linear-gradient(to right, #3b5998, #4267B2); Gradient de Facebook */
-    border-radius: 50%;
-    width:50px;
-    height:50px;
     text-align: center;
     border-radius: 41%;
     color:  #3b5998;
-    font-size: 20px;
     box-shadow: 0px 3px 10px rgba(0,0,0,.25); /* Añade una sombra para darle más profundidad */
   }
 
   &:hover .fa-instagram {
     
-    width:50px;
-    height:50px;
+
     text-align: center;
     border-radius: 41%;
     color: #fff;
-    font-size: 20px;
     background: #d6249f;
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
     box-shadow: 0px 3px 10px rgba(0,0,0,.25);
@@ -261,5 +257,34 @@ export const InformacionContacto = styled.div`
   display: flex;
   flex-direction: column;
   border: 1px solid #ccc;
+  color: #666;
 
+
+
+  & h2{
+    font-size: 24px;
+    margin: 20px 0;
+    text-align: center;
+    font-family: "Comfortaa";
+  }
+
+`;
+
+
+export const InfoDiv = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  border-bottom: 1px solid #ccc;
+
+  & span{
+    margin-left: 10px;
+    font-family: "Noto Sans";
+  }
+
+
+  & .InfoIcon{
+    font-size: 30px;
+    color: rgb(147, 147, 147);
+  }
 `;

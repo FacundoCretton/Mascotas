@@ -4,6 +4,7 @@ export const ContenedorPrincipal = styled.div`
   text-align: center;
   margin: 50px 0;
   padding: 20px;
+  
 `;
 
 export const TituloProductos = styled.h2`
@@ -50,8 +51,9 @@ export const CardCategoria = styled.div`
 
 export const SubcategoriasContainer = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin-top: 20px;
+
 
   .subcategory {
     cursor: pointer;
@@ -94,5 +96,32 @@ export const ElDivi = styled.div`
 
   /* display: flex; */
   gap:30px
+
+`;
+
+export const TextoIntroductorio = styled.p`
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+  font-family: "Noto Sans";
+  line-height: 1.6; /* Ajusta el interlineado */
+  text-align: center; /* Justifica el texto */
+`;
+
+
+export const TextoIntroductorioContainer = styled.div`
+display: flex;
+justify-content: center;
+margin-bottom: 50px;
+
+`;
+
+export const SpanText = styled.span`
+
+font-weight: 800;
+  font-size: 1.2rem;
+  background: linear-gradient(83deg, #ffa100, #fb103d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
 `;

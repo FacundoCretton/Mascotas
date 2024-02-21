@@ -4,6 +4,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
+
 export const GlobalStyles = createGlobalStyle`
    
   html{
@@ -12,7 +13,7 @@ export const GlobalStyles = createGlobalStyle`
 body {
     margin: 0;
     padding: 0;
-    background: #d3d3d3 ;
+    background: #fff ;
     font-family: 'Roboto';
     color: #333333;
     -webkit-tap-highlight-color: transparent;

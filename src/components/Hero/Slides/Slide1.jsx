@@ -1,20 +1,19 @@
 import React from 'react';
 import InteractiveCarousel from '../Hero';
+import { ImgSlide } from '../CarouselStyles';
 
 const Slide1 = () => {
   return (
-    <img
-      className="d-block w-100"
-      src="./animales.jpg"
+    <ImgSlide
+      src="./Collage.png"
       alt="Slide 1"
     />
   );
 }
 
 const Slide2 = () =>{    return (
-  <img
-  className="d-block w-100"
-  src="./animales2.jpeg"
+  <ImgSlide
+  src="./animales.jpg"
   alt="Slide 2"
   />
 );}
@@ -22,8 +21,7 @@ const Slide2 = () =>{    return (
 
 const Slide3 = () => {
     return (
-        <img
-        className="d-block w-100"
+        <ImgSlide
         src="./animales3.jpg"
         alt="Slide 3"
         />

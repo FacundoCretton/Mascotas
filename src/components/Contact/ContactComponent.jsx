@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { FormContact, FormContainer, Icon, IconsContainer, Input, InputStyled, InputWrapper, Label, MapContainer, MessageForm, SubmitButton, TextArea, TextAreaStyled } from './ContactStyles';
 import { FaUser, FaEnvelope, FaPencilAlt, FaPhone, FaMapMarker, FaInstagram, FaFacebook, FaWhatsapp } from 'react-icons/fa'; // Importa los iconos
+import { ButtonContainerStyled } from '../Navbar/Cart/ModalCart/ModalCartStyles';
 
 export const ContactForm = () => {
     const [name, setName] = useState('');
@@ -45,7 +46,9 @@ export const ContactForm = () => {
           <TextAreaStyled id="message" placeholder=" " />
           <Label htmlFor="message">Mensaje</Label>
         </InputWrapper>
+        <ButtonContainerStyled>
         <SubmitButton>Enviar</SubmitButton>
+        </ButtonContainerStyled>
       </FormContact>
     </FormContainer>
   );
@@ -70,3 +73,9 @@ export const ContactIcons = () => {
     </IconsContainer>
   );
 };
+
+// <Icon>
+// <a href="whatsapp://send?phone= +542945507201 ">// Agrega el número de teléfono
+//   <FaWhatsapp className='fa-whatsapp'/>
+// </a>
+// </Icon>

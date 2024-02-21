@@ -2,7 +2,7 @@
 export const Faqs = [
 
    {
-        titulo: "Categoria 1",
+        titulo: "Productos",
         preguntas:[
             {
                 pregunta: "Pregunta 1",
@@ -35,7 +35,7 @@ export const Faqs = [
     },
 
     {
-        titulo: "Categoria 2",
+        titulo: "Envios",
         preguntas:[
             {
                 pregunta: "Pregunta 1",
@@ -68,7 +68,7 @@ export const Faqs = [
     },
 
     {
-        titulo: "Categoria 3",
+        titulo: "Pagos",
         preguntas:[
             {
                 pregunta: "Pregunta 1",
@@ -106,7 +106,7 @@ export const Faqs = [
 
     },
     {
-        titulo: "Categoria 4",
+        titulo: "Devoluciones",
         preguntas:[
             {
                 pregunta: "Pregunta 1",

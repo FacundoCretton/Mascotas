@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FaShoppingCart } from 'react-icons/fa';
+import { RiShoppingBagLine } from 'react-icons/ri';
 
 import { CartStyled } from '../NavbarStyles';
 import { toggleCartHidden } from '../../redux/cart/cartSlide';
@@ -13,7 +13,7 @@ const CartIcon = () => {
   const dispatch = useDispatch();
   return (
     <CartStyled onClick={() => dispatch(toggleCartHidden())}>
-      <FaShoppingCart />
+      <RiShoppingBagLine size={30} color='#888' />
       <span>{totalCartItems}</span>
     </CartStyled>
   );

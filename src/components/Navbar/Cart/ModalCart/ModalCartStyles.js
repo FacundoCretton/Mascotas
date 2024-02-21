@@ -16,7 +16,8 @@ export const ContainerStyled = styled(motion.div)`
   /* height: calc(100vh - 4rem); */
   height: auto;
   padding: 2rem;
-  background-color: #6B8E23CC;
+  background-color: rgba(178, 217, 240, 0.9)
+;
   border-radius: 0 0 0 1rem;
   box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.3);
   z-index: 1000;
@@ -41,8 +42,8 @@ export const CloseButtonStyled = styled(motion.button)`
   outline: none;
   border: none;
   border-radius: 10px;
-  background: #6B8E23CC;
-  color: white;
+  background: transparent;
+  color: #666;
   cursor: pointer;
 `;
 
