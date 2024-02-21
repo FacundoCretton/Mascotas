@@ -24,9 +24,9 @@ export const NavbarContainer = styled.header`
 
 
 export const LogoStyle = styled.img`
-  width: 100px;
-  height: 85px;
-  /* border-radius: 50px; */
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
   margin: auto;
 `;
 

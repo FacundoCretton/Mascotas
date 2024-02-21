@@ -38,7 +38,7 @@ const Navbar = () => {
   return (
     <NavbarContainer ref={navbarRef} isTransparent={isTransparent}>
       <ModalCart />
-      <LogoStyle src="/Logo_81.png" alt="logo" />
+      <LogoStyle src="/Logo_13.png" alt="logo" />
       <NavbarMenuUl isOpen={isMenuOpen}> 
         <NavbarItem isTransparent={isTransparent} onClick={() => handleNavigation("#productos")}>
           <span>Productos</span>
@@ -51,7 +51,7 @@ const Navbar = () => {
         </NavbarItem>
       </NavbarMenuUl>
       <CartStyled>
-        <CartIcon />
+      <CartIcon isTransparent={isTransparent} />
       </CartStyled>
       <BarrsMenu onClick={handleMenuClick}>
         <GiHamburgerMenu />
