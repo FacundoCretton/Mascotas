@@ -10,7 +10,6 @@ import { ListProductosContainer } from "./ListProductos/ListProductosStyles";
 import PrecioFilter from "./Filters/PrecioFilter";
 import Categorias from "../Categories/Categorias";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
 const CardsProductos = () => {
   const [limit, setLimit] = useState(INITIAL_LIMIT);
@@ -19,7 +18,6 @@ const CardsProductos = () => {
   const products = useSelector(state => state.products.products);
   const selectedSubcategory = useSelector(state => state.categories.selectedSubcategory);
   const precioSortOrder = useSelector(state => state.categories.precioSortOrder);
-  const { ref, inView } = useInView({ threshold: 0.5 });
 
   const toggleView = () => {
     setViewType(prevType => (prevType === "cards" ? "list" : "cards"));
@@ -40,7 +38,7 @@ const CardsProductos = () => {
   };
 
   // Filtrar y ordenar productos
-  const filteredProducts =
+  const filteredProducts = 
     selectedCategory && selectedCategory !== "Todos"
       ? selectedSubcategory
         ? products[selectedCategory].filter(
@@ -80,10 +78,10 @@ const CardsProductos = () => {
       <Categorias/>
 
       <SectionProductosContainer>
-        <FiltersIconsProducts>
-          <Button1
+        <FiltersIconsProducts>          
+          <Button1 
             onClick={toggleView}
-            radius="10"
+            radius="10" 
             style={{ marginRight: "10px" }}
           >
             {viewType === "cards" ? <FaList /> : <FaTh />}
@@ -92,10 +90,10 @@ const CardsProductos = () => {
         </FiltersIconsProducts>
 
         {viewType === "cards" ? (
-          <CardProductosContainer ref={ref}>
+          <CardProductosContainer>
             {/* Renderizar productos */}
             {visibleProducts.map(product => (
-            <CardProductoContainer key={product.id} variants={containerVariants} initial="hidden" animate={inView ? "visible" : "hidden"}>
+            <CardProductoContainer key={product.id} variants={containerVariants} initial="hidden" animate="visible">
             <CardProducto {...product} />
           </CardProductoContainer>           ))}
           </CardProductosContainer>
@@ -119,7 +117,7 @@ const CardsProductos = () => {
                 disabled={limit <= INITIAL_LIMIT}
                 padding='1rem 2rem'
                 icon={true}
-                direction="up"
+                direction="up" 
               >
                 Ver Menos
               </Button1>
@@ -128,8 +126,8 @@ const CardsProductos = () => {
                 disabled={limit >= orderedProducts.length}
                 radius="10"
                 padding='1rem 2rem'
-                icon={true}
-                direction="down"
+                icon={true} 
+                direction="down" 
               >
                 Ver Más
               </Button1>
@@ -140,7 +138,6 @@ const CardsProductos = () => {
     </>
   );
 };
-
 
 export default CardsProductos;
 
