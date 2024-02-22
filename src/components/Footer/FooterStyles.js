@@ -35,6 +35,7 @@ export const FooterMenuItem = styled.li`
 
   a {
     color: #fff;
+    font-family: "Poppins";
 
     &:hover {
       text-decoration: underline;
@@ -47,6 +48,13 @@ export const FooterMenuItem = styled.li`
 export const FooterText = styled.div`
     text-align: center;
     padding: 20px 0 1px 0;
+
+
+  p {
+    font-family: "Noto Sans JP";
+
+
+  }
     
 
 `;
