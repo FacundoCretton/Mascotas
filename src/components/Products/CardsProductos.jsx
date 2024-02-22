@@ -61,6 +61,7 @@ const CardsProductos  = () => {
   const handleLoadLessClick = () => {
     setLimit(INITIAL_LIMIT);
   };
+  
 
   return (
     <>

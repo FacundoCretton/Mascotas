@@ -69,7 +69,8 @@ export const products = [
     subcategory:'Alimentos',
     price: 300,
     img:require('../../Assets/Productos/Alimentos/3.png'),
-    stock: true,
+    imgDorso: require('../../Assets/Productos/Alimentos/3-D.png'),
+    stock: false,
 
   },
   {
@@ -82,7 +83,7 @@ export const products = [
     price: 300,
     img:require('../../Assets/Productos/Alimentos/4.png'),
     imgDorso: require('../../Assets/Productos/Alimentos/4-D.png'),
-    stock: true,
+    stock: false,
 
 
   },
@@ -96,7 +97,7 @@ export const products = [
     price: 300,
     img:require('../../Assets/Productos/Alimentos/5.png'),
     imgDorso: require('../../Assets/Productos/Alimentos/5-D.png'),
-    stock: true,
+    stock: false,
 
   },
   {
@@ -109,7 +110,7 @@ export const products = [
     price: 300,
     img:require('../../Assets/Productos/Alimentos/6.png'),
     imgDorso: require('../../Assets/Productos/Alimentos/6-D.png'),
-    stock: true,
+    stock: false,
 
   },
   {
@@ -122,7 +123,7 @@ export const products = [
     price: 300,
     img:require('../../Assets/Productos/Alimentos/102.png'),
     imgDorso: require('../../Assets/Productos/Alimentos/102-D.png'),
-    stock: true,
+    stock: false,
 
   },
   {
@@ -135,7 +136,7 @@ export const products = [
     price: 300,
     img:require('../../Assets/Productos/Alimentos/7.png'),
     imgDorso: require('../../Assets/Productos/Alimentos/7-D.png'),
-    stock: true,
+    stock: false,
 
   },
   {
@@ -193,7 +194,7 @@ export const products = [
     subcategory: 'Cuchas',
     price: 400,
     img:'/animales.jpg',
-    stock: true,
+    stock: false,
 
   },
 
@@ -205,7 +206,7 @@ export const products = [
     subcategory:'Cuchas',
     price: 500,
     img:'/animales.jpg',
-    stock: true,
+    stock: false,
 
   },
 
@@ -217,7 +218,7 @@ export const products = [
     subcategory:'Juguetes',
     price: 600,
     img:'/animales.jpg',
-    stock: true,
+    stock: false,
 
   },
 
@@ -229,7 +230,7 @@ export const products = [
     subcategory:'Juguetes',
     price: 700,
     img:'/animales.jpg',
-    stock: true,
+    stock: false,
 
 
   },
@@ -242,7 +243,7 @@ export const products = [
     subcategory:'Camas', 
     price: 800,
     img:'/animales.jpg',
-    stock: true,
+    stock: false,
 
   },
 
@@ -254,7 +255,7 @@ export const products = [
     subcategory:'Camas',
     price: 900,
     img:'/animales.jpg',
-    stock: true,
+    stock: false,
 
   },
 
@@ -266,7 +267,7 @@ export const products = [
     subcategory: 'Juguetes',
     price: 1000,
     img:'/animales.jpg',
-    stock: true,
+    stock: false,
 
   },
 
@@ -278,7 +279,7 @@ export const products = [
     subcategory: 'Juguetes',
     price: 1100,
     img:'/animales.jpg',
-    stock: true,
+    stock: false,
 
   },
 

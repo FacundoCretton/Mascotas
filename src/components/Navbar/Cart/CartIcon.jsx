@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
 import { RiShoppingBagLine } from 'react-icons/ri';
-
 import { CartStyled } from '../NavbarStyles';
 import { toggleCartHidden } from '../../redux/cart/cartSlide';
 import { useDispatch, useSelector } from 'react-redux';
