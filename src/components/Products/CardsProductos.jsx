@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import CardProducto from "./CardProducto";
 import ListProductos from "./ListProductos/ListProductos";
 import Button1 from "../UI/Button/Button";
-import { ButtonContainer, CardProductosContainer, FiltersIconsProducts, LoadButtonContainer, SectionProductosContainer } from "./ProductsStyles";
+import {  CardProductosContainer, FiltersIconsProducts, LoadButtonContainer, SectionProductosContainer } from "./ProductsStyles";
 import { INITIAL_LIMIT } from "../../utils/constants";
 import { FaList, FaTh } from "react-icons/fa";
 import { ListProductosContainer } from "./ListProductos/ListProductosStyles";

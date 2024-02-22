@@ -3,6 +3,7 @@ import { NavbarContainer, LogoStyle, NavbarMenuUl, NavbarItem, BarrsMenu, CartSt
 import { GiHamburgerMenu } from "react-icons/gi";
 import CartIcon from "./Cart/CartIcon";
 import ModalCart from "./Cart/ModalCart/ModalCart";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -27,8 +28,10 @@ const Navbar = () => {
   };
 
   const handleNavigation = (target) => {
+    let destination = target === "#" ? "/" : target;
+
     const offset = navbarRef.current.offsetHeight + 1; // Altura de la barra de navegación + 80px adicionales
-    const element = document.querySelector(target);
+    const element = document.querySelector(destination);
     const y = element.getBoundingClientRect().top + window.scrollY - offset;
 
     window.scrollTo({ top: y, behavior: 'smooth' });
@@ -40,6 +43,9 @@ const Navbar = () => {
       <ModalCart />
       <LogoStyle src="/Logo_13.png" alt="logo" />
       <NavbarMenuUl isOpen={isMenuOpen}> 
+      <NavbarItem isTransparent={isTransparent}>
+          <Link to="/#" onClick={() => setMenuOpen(false)}><span>Home</span></Link>
+        </NavbarItem>
         <NavbarItem isTransparent={isTransparent} onClick={() => handleNavigation("#productos")}>
           <span>Productos</span>
         </NavbarItem>

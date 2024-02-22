@@ -73,6 +73,7 @@ export const NavbarItem = styled.li`
     padding: 0px 20px;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 
     span {
         position: relative;

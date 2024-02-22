@@ -1,6 +1,6 @@
 import React from "react";
 import { formatPrice } from "../../utils/formatPrice";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import Button from "../UI/Button/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
