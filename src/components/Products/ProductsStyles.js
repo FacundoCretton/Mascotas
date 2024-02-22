@@ -167,8 +167,8 @@ export const containerVariants = {
     x: 0, // Se mueve hacia la posición original
     transition: {
       type: "spring", // Tipo de transición
-      stiffness: 50, // Ajusta la rigidez de la animación
-      duration: 1.5 // Ajusta la duración de la animación
+      stiffness: 120, // Ajusta la rigidez de la animación
+      duration: 1 // Ajusta la duración de la animación
     }
   }
 };

@@ -9,7 +9,7 @@ import { ListItem, ListItemText } from "@mui/material";
 import PetsIcon from '@mui/icons-material/Pets';
 import AdditionalInfoComponent from "./AditionalInfoComponent";
 import { RiArrowLeftLine, RiArrowRightLine } from "react-icons/ri";
-import  { handleBackClick, handleForwardClick } from "./Flechas";  
+import  { handleBackClick, handleForwardClick } from "../Flechas";  
 
 
 const DetalleProducto = () => {

@@ -141,7 +141,7 @@ export const products = [
   },
   {
     id: 10,
-    name: 'PERRO ADULTO RAZA GRANDE CONTROL DE PESO',
+    name: 'Perro adulto de raza grande. Control de peso',
     tags: ["PREMIUM"],
     category: 'Perros',
     desc:'Perros que en edad adulta van a tener un peso de +40 kg',

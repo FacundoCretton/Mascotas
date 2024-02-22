@@ -12,7 +12,6 @@ import {
   TextoIntroductorioContainer,
   SpanText,
 } from "./CategoriasStyles";
-import { motion } from "framer-motion";
 import { CategoriaContainer, containerVariants } from "../Products/ProductsStyles";
 
 const Categorias = () => {
@@ -20,6 +19,7 @@ const Categorias = () => {
   const selectedCategory = useSelector((state) => state.categories.selectedCategory);
   const selectedSubcategory = useSelector((state) => state.categories.selectedSubcategory);
   const dispatch = useDispatch();
+  
 
   const handleSubcategoryClick = (subcategory) => {
     dispatch(selectSubcategory(subcategory));
