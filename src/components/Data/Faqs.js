@@ -35,7 +35,7 @@ export const Faqs = [
     },
 
     {
-        titulo: "Envios",
+        titulo: "Envíos",
         preguntas:[
             {
                 pregunta: "Pregunta 1",

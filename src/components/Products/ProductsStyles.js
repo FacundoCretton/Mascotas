@@ -2,6 +2,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Card from 'react-bootstrap/Card';
 import styled, { css } from 'styled-components';
+import { motion } from 'framer-motion';
 export const CardProductosContainer = styled.div `
   display: grid;
   place-items: center;
@@ -134,3 +135,40 @@ export const SectionProductosContainer = styled.section`
 
 
 `;
+
+
+
+// Estilos para el contenedor de categoría
+export const CategoriaContainer = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  padding: 10px;
+
+`;
+
+// Estilos para el contenedor de producto
+export const CardProductoContainer = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  padding: 10px;
+`;
+
+export const containerVariants = {
+  hidden: {
+    opacity: 0,
+    x: "-100vw" // Empieza fuera del viewport hacia la izquierda
+  },
+  visible: {
+    opacity: 1,
+    x: 0, // Se mueve hacia la posición original
+    transition: {
+      type: "spring", // Tipo de transición
+      stiffness: 30, // Rigidez de la animación
+      delay: 0.5 // Retraso antes de la animación
+    }
+  }
+};

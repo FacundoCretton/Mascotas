@@ -12,6 +12,8 @@ import {
   TextoIntroductorioContainer,
   SpanText,
 } from "./CategoriasStyles";
+import { motion } from "framer-motion";
+import { CategoriaContainer, containerVariants } from "../Products/ProductsStyles";
 
 const Categorias = () => {
   const categories = useSelector((state) => state.categories.categories);
@@ -33,10 +35,9 @@ const Categorias = () => {
       </TextoIntroductorioContainer>
       <ContenedorCategorias>
         {categories.map((category) => (
-          <Categoria
-            key={category.id}
-            {...category}
-          />
+          <CategoriaContainer key={category.id} variants={containerVariants} initial="hidden" animate="visible">
+          <Categoria {...category} />
+        </CategoriaContainer>
         ))}
       </ContenedorCategorias>
       {selectedCategory && (
