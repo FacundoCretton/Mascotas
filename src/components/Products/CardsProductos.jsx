@@ -9,7 +9,7 @@ import { FaList, FaTh } from "react-icons/fa";
 import { ListProductosContainer } from "./ListProductos/ListProductosStyles";
 import PrecioFilter from "./Filters/PrecioFilter";
 
-const CardsProductos  = () => {
+const CardsProductos = () => {
   const [limit, setLimit] = useState(INITIAL_LIMIT);
   const [viewType, setViewType] = useState("cards");
   const selectedCategory = useSelector(state => state.categories.selectedCategory);
@@ -52,73 +52,84 @@ const CardsProductos  = () => {
         : [];
 
   const sortedProducts = sortProductsByPrice(filteredProducts);
-  const visibleProducts = sortedProducts.slice(0, limit);
+
+  // Dividir productos en dos grupos: con stock y sin stock
+  const stockAvailableProducts = sortedProducts.filter(product => product.stock);
+  const outOfStockProducts = sortedProducts.filter(product => !product.stock);
+
+  // Ordenar productos: primero los con stock y luego los sin stock
+  const orderedProducts = [...stockAvailableProducts, ...outOfStockProducts];
+
+  // Limitar la cantidad de productos visibles
+  const visibleProducts = orderedProducts.slice(0, limit);
 
   const handleLoadMoreClick = () => {
-    setLimit(prevLimit => Math.min(prevLimit + INITIAL_LIMIT, sortedProducts.length));
+    setLimit(prevLimit => Math.min(prevLimit + INITIAL_LIMIT, orderedProducts.length));
   };
 
   const handleLoadLessClick = () => {
     setLimit(INITIAL_LIMIT);
   };
-  
 
   return (
     <>
-    <SectionProductosContainer>
-      <FiltersIconsProducts >          
-        <Button1 
-          onClick={toggleView}
-          radius="10" 
-          style={{ marginRight: "10px" }}
-          >{viewType === "cards" ? <FaList /> : <FaTh />}
-        </Button1>
-        <PrecioFilter/>
-      </FiltersIconsProducts>
+      <SectionProductosContainer>
+        <FiltersIconsProducts>          
+          <Button1 
+            onClick={toggleView}
+            radius="10" 
+            style={{ marginRight: "10px" }}
+          >
+            {viewType === "cards" ? <FaList /> : <FaTh />}
+          </Button1>
+          <PrecioFilter/>
+        </FiltersIconsProducts>
 
-      {viewType === "cards" ? (
-        <CardProductosContainer>
-          {/* Renderiza las tarjetas de productos */}
-          {visibleProducts.map(pet => <CardProducto {...pet} key={pet.id} />)}
-        </CardProductosContainer>
-      ) : (
-        <ListProductosContainer>
-          {/* Renderiza la lista de productos */}
-          {visibleProducts.map(pet => <ListProductos {...pet} key={pet.id} />)}
-        </ListProductosContainer>
-      )}
-
-      <LoadButtonContainer>
-        {/* Botones para ver más o menos productos */}
-        {(viewType === "cards" || viewType === "list") && (
-          <>
-
-              <Button1
-                  onClick={handleLoadLessClick}
-                  radius="10"
-                  secondary="true"
-                  disabled={limit <= INITIAL_LIMIT}
-                  padding='1rem 2rem'
-                  icon={true}
-                  direction="up" 
-              >
-                  Ver Menos
-              </Button1>
-              <Button1
-                 onClick={handleLoadMoreClick}
-                 disabled={limit >= sortedProducts.length}
-                 radius="10"
-                 padding='1rem 2rem'
-                 icon={true} 
-                 direction="down" 
-              >
-                  Ver Más
-              </Button1>
-          </>
+        {viewType === "cards" ? (
+          <CardProductosContainer>
+            {/* Renderizar productos */}
+            {visibleProducts.map(product => (
+              <CardProducto {...product} key={product.id} />
+            ))}
+          </CardProductosContainer>
+        ) : (
+          <ListProductosContainer>
+            {/* Renderizar productos */}
+            {visibleProducts.map(product => (
+              <ListProductos {...product} key={product.id} />
+            ))}
+          </ListProductosContainer>
         )}
-      </LoadButtonContainer>
+
+        <LoadButtonContainer>
+          {/* Botones para ver más o menos productos */}
+          {(viewType === "cards" || viewType === "list") && (
+            <>
+              <Button1
+                onClick={handleLoadLessClick}
+                radius="10"
+                secondary="true"
+                disabled={limit <= INITIAL_LIMIT}
+                padding='1rem 2rem'
+                icon={true}
+                direction="up" 
+              >
+                Ver Menos
+              </Button1>
+              <Button1
+                onClick={handleLoadMoreClick}
+                disabled={limit >= orderedProducts.length}
+                radius="10"
+                padding='1rem 2rem'
+                icon={true} 
+                direction="down" 
+              >
+                Ver Más
+              </Button1>
+            </>
+          )}
+        </LoadButtonContainer>
       </SectionProductosContainer>
-      
     </>
   );
 };
