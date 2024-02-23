@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectCategory } from "../redux/categories/categoriesSlice";
-import { CardCategoria, CategoryIcon, CategoryName, ElDivi } from "./CategoriasStyles";
+import { CardCategoria, CategoryIcon, CategoryName, ElDivi, IconH2 } from "./CategoriasStyles";
 
 
 
@@ -25,9 +25,10 @@ export const Categoria = ({ name, category, icon }) => {
       <ElDivi>
       <CategoryIcon>
         {icon}
+        <IconH2>{name}</IconH2>
       </CategoryIcon>
 
-      <h2>{name}</h2>
+      {/* <h2>{name}</h2> */}
       </ElDivi>
     </CardCategoria>
   );

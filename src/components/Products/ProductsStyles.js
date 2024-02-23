@@ -81,8 +81,8 @@ export const CustomCardTitle = styled(Card.Title)`
   color: #333;
   text-align: center;
   font-weight: 600;
-  font-family: "Comfortaa", cursive;
-`;
+  font-family: "Bricolage";
+  `;
 
 export const PTag = styled.p `
 

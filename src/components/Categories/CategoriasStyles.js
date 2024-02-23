@@ -11,7 +11,7 @@ export const TituloProductos = styled.h2`
   color: #333;
   margin-bottom: 20px;
   text-transform: uppercase;
-  font-family: "Comfortaa";
+  font-family: "Bricolage Grotesque";
   font-size: 24px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -80,8 +80,22 @@ export const SubcategoriasContainer = styled.div`
 `;
 
 export const CategoryIcon = styled.div`
-  font-size: 23px;
-  margin-bottom: 10px;
+    font-size: 23px;
+    margin-bottom: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  `;
+
+export const IconH2 = styled.h2`
+
+  font-size: 18px;
+  color: #333;
+  font-weight: 500;
+  margin-top:10px;
+
+
 `;
 
 export const CategoryList = styled.div`
@@ -103,7 +117,7 @@ export const TextoIntroductorio = styled.p`
   font-size: 18px;
   color: #666;
   margin-bottom: 30px;
-  font-family: "Noto Sans";
+  font-family: "Plus Jakarta Sans";
   line-height: 1.6; /* Ajusta el interlineado */
   text-align: center; /* Justifica el texto */
 `;
