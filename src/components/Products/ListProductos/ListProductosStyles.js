@@ -32,8 +32,8 @@ export const DivDelMedio = styled.div`
 `;
 
 export const BeneficioIcono = styled.img`
-  width: 60px; 
-  height: 60px;
+  width: 45px; 
+  height: 45px;
   border-radius: 50%;
   border: 1px dashed black; /* Color de borde en gris claro */
   padding: 9px;
@@ -53,6 +53,14 @@ export const BeneficioIcono = styled.img`
 export const ElBeneficio = styled.div`
   text-align: center; /* Centra el contenido horizontalmente */
   margin-top: 10px; /* Espacio entre beneficios */
+
+  span{
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+  
+  }
 `;
 
 
@@ -116,11 +124,9 @@ export const AirtonSenna = styled.div`
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding: 20px;
   width: 100%;
   gap: 20px;
-  text-align: center;
-  align-items: center;
+  align-items: flex-start;
 
 `;

@@ -9,7 +9,6 @@ export const IncrenseStyled = styled(motion.button)`
   height: 30px;
   background: ${({ bgColor }) => bgColor || '#008000'};
   border: none;
-  border-radius: 10px;
   font-size: 0.8rem;
   font-weight: 800;
   color: white;
@@ -21,8 +20,8 @@ export const IncrenseStyled = styled(motion.button)`
   }
 
   @media screen and (max-width: 500px) {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     
   }
 `;

@@ -122,7 +122,7 @@ export const FiltersIconsProducts = styled.div`
 
 export const SectionProductosContainer = styled.section`
 
-  max-width: 1200px ;
+  /* max-width: 1200px ; */
   width: 100%;
   background-image: linear-gradient(
       0deg,

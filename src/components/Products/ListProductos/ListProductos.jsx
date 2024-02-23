@@ -29,7 +29,8 @@ const ListProductos = ({ img, name,tags, price, desc, id, stock, beneficios, img
   };
   return (
     <ListItem>
-        <DivDeArriba><ProductName>{name}</ProductName></DivDeArriba>
+        <DivDeArriba><ProductName>{name}</ProductName>
+        </DivDeArriba>
         <DivDelMedio>
         <ProductImageComponent
         src={mostrarDorso ? imgDorso : img}

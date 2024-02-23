@@ -11,6 +11,7 @@ export const ContactWrapper = styled.section`
   margin-bottom: 100px;
   border: 1.8px solid #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  max-width: 1200px;
 
 `;
 export const FilaSuperior = styled.div`

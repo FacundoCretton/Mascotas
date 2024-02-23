@@ -6,12 +6,13 @@ import Carousel from 'react-bootstrap/Carousel'
 export const StyledCarousel = styled(Carousel)`
 
 
-    width: 100%;
+    width: 90%;
+    max-width: 1200px; /* Establece el ancho máximo en 1200px */
     height: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 30px auto;
+    margin: 20px auto;
     
     .carousel-item {
     height: 450px;
@@ -20,6 +21,30 @@ export const StyledCarousel = styled(Carousel)`
     position: relative;
 
     }
+
+    .carousel-indicators {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin-right: 15%;
+      margin-bottom: 1rem;
+      margin-left: 15%;
+
+  }
+
+    .carousel-indicators .active {
+      background-color: yellow;
+      /* box-shadow: #d3fbff 0px 0px 40px 0px; */
+
+    }
+    
+
+
 
 
   /* &.no-width img {
@@ -54,3 +79,4 @@ export const CaptionBackground = styled.div`
   padding: 10px; /* Ajusta el espaciado dentro del fondo */
   border-radius: 5px; /* Añade bordes redondeados para suavizar los bordes */
 `;
+

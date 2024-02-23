@@ -4,6 +4,7 @@ import { CaptionBackground, StyledCarousel } from './CarouselStyles';
 const Carousell =()=> {
   return (
     <StyledCarousel>
+      
       <Carousel.Item>
         <Slide1 text="First slide" />
         <Carousel.Caption>
@@ -35,6 +36,7 @@ const Carousell =()=> {
 
         </Carousel.Caption>
       </Carousel.Item>
+      
     </StyledCarousel>
   );
 }
