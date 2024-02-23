@@ -17,7 +17,7 @@ export const ContainerInfoStyled = styled.div`
   text-align: center;
 
   & p {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 `;
 
@@ -31,4 +31,5 @@ export const PatternStyled = styled.img`
 
 export const Congrats= styled.div`
 margin-top: 100px;
+margin-bottom: 50px;
 `;
