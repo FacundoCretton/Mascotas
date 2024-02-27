@@ -171,3 +171,18 @@ export const containerVariants = {
     }
   }
 };
+
+
+
+export const Ingrid = styled.div`
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  
+
+
+
+`;

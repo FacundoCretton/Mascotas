@@ -15,6 +15,7 @@ import {
   CardsStyle,
   ContainerPrice,
   CustomCardTitle,
+  Ingrid,
   PTag,
   StyledAccordionHeader,
 } from "./ProductsStyles";
@@ -32,7 +33,7 @@ const CardProducto = ({ img, name,tags, price, desc, id, stock }) => {
       ))}
       </CustomCardTitle>
           <div style={{ position: "relative", textAlign: 'center' }}>
-            <Card.Img variant="top" src={img} style={{ width: '120px', height: '230px' }} />
+            <Card.Img variant="top" src={img} style={{ width: '100px', height: '180px' }} />
             {!stock && ( // Mostrar el texto "Sin stock" solo cuando no haya stock
               <div style={{ position: "absolute", bottom: 0, left: '50%', transform: 'translateX(-50%)', backgroundColor: 'rgba(255, 255, 255, 0.7)', padding: '5px', borderRadius: '5px' }}>
                 <p style={{ color: 'red', fontWeight: 'bold', margin: '0' }}>Sin stock</p>
@@ -52,16 +53,17 @@ const CardProducto = ({ img, name,tags, price, desc, id, stock }) => {
               {/* <StyledAccordionHeader>Herramientas utilizadas</StyledAccordionHeader> */}
               <Accordion.Body>
                 <ListGroup>
-                  {/* <ListGroup.Item><img src={html1} alt="html" width="30px"/> HTML</ListGroup.Item>
-                  <ListGroup.Item><img src={css1} alt="css" width="30px"/> CSS</ListGroup.Item> */}
+                  {/* <ListGroup.Item><p>Peso</p> <span>13kg </span></ListGroup.Item>
+                  <ListGroup.Item><p>Peso</p> <span>13kg </span></ListGroup.Item> */}
                 </ListGroup>
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
         </Card.Body>
         <Card.Body>
+          <Ingrid>
           <ContainerPrice>
-            {stock ? <p style={{color:'green', fontWeight: '600'}}>Stock disponible</p> : <p style={{color: 'red', fontWeight: '600', fontStyle: 'italic'}}>Sin stock</p>}
+            {stock ? "" : <p style={{color: 'red', fontWeight: '600', fontStyle: 'italic'}}>Sin stock</p>}
             <CardPrice>{formatPrice(price)}</CardPrice>
           </ContainerPrice>
           <ButtonContainer>
@@ -79,6 +81,7 @@ const CardProducto = ({ img, name,tags, price, desc, id, stock }) => {
               <Button disabled ><span style={{fontWeight: '600', fontSize:'14px'}}>Sin stock</span></Button>
             )}
           </ButtonContainer>
+          </Ingrid>
         </Card.Body>
       </Card>
     </CardsStyle>
