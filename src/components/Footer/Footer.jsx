@@ -19,7 +19,7 @@ const Footer = () => {
       </FooterContent>
       <FooterText>
 
-        <p>© 2024 San Roque. Todos los derechos reservados</p>
+        <p>© 2021 San Roque. Todos los derechos reservados</p>
 
       </FooterText>
     </FooterContainer>
