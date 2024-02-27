@@ -1,5 +1,4 @@
 import React from 'react';
-import InteractiveCarousel from '../Hero';
 import { ImgSlide } from '../CarouselStyles';
 
 const Slide1 = () => {

@@ -1,7 +1,7 @@
 // ContactComponents.js
 import React, { useState } from 'react';
-import { FormContact, FormContainer, Icon, IconsContainer, Input, InputStyled, InputWrapper, Label, MapContainer, MessageForm, SubmitButton, TextArea, TextAreaStyled } from './ContactStyles';
-import { FaUser, FaEnvelope, FaPencilAlt, FaPhone, FaMapMarker, FaInstagram, FaFacebook, FaWhatsapp } from 'react-icons/fa'; // Importa los iconos
+import { FormContact, FormContainer, Icon, IconsContainer, InputStyled, InputWrapper, Label, MapContainer, MessageForm, SubmitButton, TextAreaStyled } from './ContactStyles';
+import { FaUser, FaEnvelope, FaPencilAlt, FaInstagram, FaFacebook, FaWhatsapp } from 'react-icons/fa'; // Importa los iconos
 import { ButtonContainerStyled } from '../Navbar/Cart/ModalCart/ModalCartStyles';
 
 export const ContactForm = () => {

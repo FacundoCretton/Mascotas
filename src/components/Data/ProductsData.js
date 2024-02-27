@@ -3,7 +3,7 @@ import bone from '../Products/ListProductos/icons/bones.svg'
 import hair1 from '../Products/ListProductos/icons/hair.ico'
 import energy from '../Products/ListProductos/icons/heart.svg'
 import vitalidad from '../Products/ListProductos/icons/veterinary.svg'
-import intestinal from '../Products/ListProductos/icons/bowels.svg'
+// import intestinal from '../Products/ListProductos/icons/bowels.svg'
 import stomach from '../Products/ListProductos/icons/stomach.png'
 export const beneficiosIconos = {
   energia: energy,

@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { DetallesWrapper, TituloH1, ProductImage, ProductDetails, Price, Specifications, DescriptionWrapper, DescriptionTitle, DescriptionText, BeneficiosWrapper, ImageColumn, BeneficioIcon, CustomLargeImageContainer, largeImageContainerStyle, LargeImageContainerStyle } from "./DetalleProductosStyles";
+import { DetallesWrapper, TituloH1, ProductImage, ProductDetails, Price, Specifications, DescriptionWrapper, DescriptionTitle, DescriptionText, BeneficiosWrapper, ImageColumn, BeneficioIcon} from "./DetalleProductosStyles";
 import { Divider } from "antd";
 import CompositionTable from "./CompositionTable";
 import { ListItem, ListItemText } from "@mui/material";

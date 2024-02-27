@@ -1,5 +1,4 @@
 import Accordion from 'react-bootstrap/Accordion';
-import ListGroup from 'react-bootstrap/ListGroup';
 import Card from 'react-bootstrap/Card';
 import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';

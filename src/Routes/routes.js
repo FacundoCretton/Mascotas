@@ -4,9 +4,7 @@ import DetalleProducto from '../components/Products/DetalleProductos/DetalleProd
 import Carousell from '../components/Hero/Carousel';
 import CardsProductos from '../components/Products/CardsProductos';
 import { PreguntasFrecuentes } from '../components/Faqs/PreguntasFrecuentes';
-import ListProductos from '../components/Products/ListProductos/ListProductos';
 import ContactSection from '../components/Contact/ContactSection';
-import Footer from '../components/Footer/Footer';
 import Checkout from '../pages/Checkout/Checkout';
 import Felicitaciones from '../pages/Felicitaciones/Felicitaciones';
 

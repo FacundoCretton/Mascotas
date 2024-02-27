@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectCategory } from "../redux/categories/categoriesSlice";
-import { CardCategoria, CategoryIcon, CategoryName, ElDivi, IconH2 } from "./CategoriasStyles";
+import { CardCategoria, CategoryIcon, ElDivi, IconH2 } from "./CategoriasStyles";
 
 
 

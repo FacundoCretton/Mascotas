@@ -1,6 +1,6 @@
 // ContactSection.js
 import React from 'react';
-import { ContactForm, Map, ContactIcons } from './ContactComponent';
+import { ContactForm, ContactIcons } from './ContactComponent';
 import { ContactContainer, ContactFormContainer, ContactWrapper, Description, FilaSuperior, InfoDiv, InformacionContacto, MapContainer, Title, TitleBackground, TitleSection } from './ContactStyles';
 import { FaAt, FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 
