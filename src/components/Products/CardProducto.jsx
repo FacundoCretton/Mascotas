@@ -17,6 +17,7 @@ import {
   CustomCardTitle,
   Ingrid,
   PTag,
+  Patricio,
   StyledAccordionHeader,
 } from "./ProductsStyles";
 import { addToCart } from "../redux/cart/cartSlide";
@@ -63,6 +64,7 @@ const CardProducto = ({ img, name,tags, price, desc, id, stock }) => {
         <Card.Body>
           <Ingrid>
           <ContainerPrice>
+            {/* <Patricio>Precio por unidad</Patricio> */}
             {stock ? "" : <p style={{color: 'red', fontWeight: '600', fontStyle: 'italic'}}>Sin stock</p>}
             <CardPrice>{formatPrice(price)}</CardPrice>
           </ContainerPrice>

@@ -4,9 +4,8 @@ import styled, { css } from 'styled-components';
 export const NavbarContainer = styled.header`
   /* background-color:#ffd700 ; */
 
-  background-color: ${({ isTransparent }) => (isTransparent ?"#b2d9f0" 
-  :
-  "rgba(173, 216, 230, 0.4)" )};
+  background-color: ${({ isTransparent }) => (isTransparent ? "#dbc4ff" : "rgba(220, 204, 255, 0.4)")};
+
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;

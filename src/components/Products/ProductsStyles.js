@@ -181,8 +181,19 @@ export const Ingrid = styled.div`
   gap: 10px;
   align-items: center;
   justify-content: center;
-  
+
 
 
 
 `;
+
+
+// export const Patricio = styled.p`
+
+//   font-size: 1rem;
+//   font-weight: 600;
+//   color: #333;
+//   text-align: center;
+
+
+// `;
