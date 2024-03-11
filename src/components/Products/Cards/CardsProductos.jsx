@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import CardProducto from "./CardProducto";
-import ListProductos from "./ListProductos/ListProductos";
-import Button1 from "../UI/Button/Button";
-import {  CardProductosContainer, FiltersIconsProducts, LoadButtonContainer, SectionProductosContainer } from "./ProductsStyles";
-import { INITIAL_LIMIT } from "../../utils/constants";
+import ListProductos from "../ListProductos/ListProductos";
+import Button1 from "../../UI/Button/Button";
+import {  CardProductosContainer, FiltersIconsProducts, LoadButtonContainer, SectionProductosContainer } from "../ProductsStyles";
+import { INITIAL_LIMIT } from "../../../utils/constants";
 import { FaList, FaTh } from "react-icons/fa";
-import { ListProductosContainer } from "./ListProductos/ListProductosStyles";
-import PrecioFilter from "./Filters/PrecioFilter";
-import Categorias from "../Categories/Categorias";
+import { ListProductosContainer } from "../ListProductos/ListProductosStyles";
+import PrecioFilter from "../Filters/PrecioFilter";
+import Categorias from "../../Categories/Categorias";
 const CardsProductos = () => {
   const [limit, setLimit] = useState(INITIAL_LIMIT);
   const [viewType, setViewType] = useState("cards");
@@ -70,24 +70,25 @@ const CardsProductos = () => {
             radius="10" 
             style={{ marginRight: "10px" }}
           >
-            {viewType === "cards" ? <FaList /> : <FaTh />}
+            {viewType === "cards" ? <FaTh /> : <FaList />}
           </Button1>
           <PrecioFilter/>
         </FiltersIconsProducts>
         {viewType === "cards" ? (
+          <ListProductosContainer>
+          {/* Renderizar productos */}
+          {visibleProducts.map(product => (
+            <ListProductos {...product} key={product.id} />
+          ))}
+        </ListProductosContainer>
+          
+        ) : (
           <CardProductosContainer>
             {/* Renderizar productos */}
             {visibleProducts.map(product => (
               <CardProducto {...product} key={product.id} />
             ))}
           </CardProductosContainer>
-        ) : (
-          <ListProductosContainer>
-            {/* Renderizar productos */}
-            {visibleProducts.map(product => (
-              <ListProductos {...product} key={product.id} />
-            ))}
-          </ListProductosContainer>
         )}
         <LoadButtonContainer>
           {/* Botones para ver más o menos productos */}

@@ -1,8 +1,8 @@
 import React from "react";
-import { formatPrice } from "../../utils/formatPrice";
+import { formatPrice } from "../../../utils/formatPrice";
 import { useDispatch } from "react-redux";
 
-import Button from "../UI/Button/Button";
+import Button from "../../UI/Button/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Accordion from "react-bootstrap/Accordion";
@@ -17,10 +17,10 @@ import {
   CustomCardTitle,
   Ingrid,
   PTag,
-  Patricio,
+  // Patricio,
   StyledAccordionHeader,
-} from "./ProductsStyles";
-import { addToCart } from "../redux/cart/cartSlide";
+} from "../ProductsStyles";
+import { addToCart } from "../../redux/cart/cartSlide";
 
 const CardProducto = ({ img, name,tags, price, desc, id, stock }) => {
   const dispatch = useDispatch();
@@ -51,11 +51,11 @@ const CardProducto = ({ img, name,tags, price, desc, id, stock }) => {
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="1">
-              {/* <StyledAccordionHeader>Herramientas utilizadas</StyledAccordionHeader> */}
+              <StyledAccordionHeader>Herramientas utilizadas</StyledAccordionHeader>
               <Accordion.Body>
                 <ListGroup>
-                  {/* <ListGroup.Item><p>Peso</p> <span>13kg </span></ListGroup.Item>
-                  <ListGroup.Item><p>Peso</p> <span>13kg </span></ListGroup.Item> */}
+                  <ListGroup.Item><p>Peso</p> <span>13kg </span></ListGroup.Item>
+                  <ListGroup.Item><p>Peso</p> <span>13kg </span></ListGroup.Item>
                 </ListGroup>
               </Accordion.Body>
             </Accordion.Item>

@@ -55,11 +55,12 @@ export const SubcategoriasContainer = styled.div`
   margin-top: 20px;
 
 
+
   .subcategory {
     cursor: pointer;
     padding: 8px 15px;
     margin: 0 5px;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: #81D4FA;
     color: #333;
     transition: background-color 0.3s ease;
@@ -139,3 +140,6 @@ font-weight: 800;
   -webkit-text-fill-color: transparent;
 
 `;
+
+
+

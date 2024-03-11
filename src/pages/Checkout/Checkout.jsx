@@ -28,6 +28,7 @@ const Checkout = () => {
           shippingCost={shippingCost}
           price={price}
         />
+        
       </ContainerCheckoutStyled>
     </div>
   );

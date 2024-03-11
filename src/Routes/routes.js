@@ -2,11 +2,12 @@ import React from 'react';
 import {Routes as ReactDomRoutes, Route} from 'react-router-dom';
 import DetalleProducto from '../components/Products/DetalleProductos/DetalleProductos';
 import Carousell from '../components/Hero/Carousel';
-import CardsProductos from '../components/Products/CardsProductos';
 import { PreguntasFrecuentes } from '../components/Faqs/PreguntasFrecuentes';
 import ContactSection from '../components/Contact/ContactSection';
 import Checkout from '../pages/Checkout/Checkout';
 import Felicitaciones from '../pages/Felicitaciones/Felicitaciones';
+import PaymentMethods from '../components/Hero/SubHero/MediosDePago';
+import CardsProductos from '../components/Products/Cards/CardsProductos';
 
 
 
@@ -42,6 +43,7 @@ function Home(){
     return(
         <>
         <Carousell/>
+        <PaymentMethods/>
         <CardsProductos/>
         <PreguntasFrecuentes/> 
         <ContactSection/>

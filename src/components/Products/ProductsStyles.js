@@ -125,10 +125,10 @@ export const SectionProductosContainer = styled.section`
   width: 100%;
   background-image: linear-gradient(
       0deg,
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
+      rgba(255, 247, 224, 0.8),
+      rgba(255, 247, 224, 0.8)
     ),
-    url("/Background111.png");
+    url("/Background112.png");
   background-repeat:repeat;
   background-size: 100% auto; /* Ajuste de la propiedad background-size */
 

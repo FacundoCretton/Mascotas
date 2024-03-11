@@ -8,6 +8,7 @@
     "@fontsource/roboto": "^5.0.8",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@mercadopago/sdk-react": "^0.0.18",
     "@mui/icons-material": "^5.15.1",
     "@mui/material": "^5.15.1",
     "@redux-devtools/extension": "^3.3.0",

@@ -15,6 +15,7 @@ import {
   PriceTotalStyled,
   PClearStyled,
 } from './ProductsCkeckoutStyles';
+import MercadoPagoBrick from '../MercadoPagoBricks';
 
 const ProductsCheckout = ({cartItems, shippingCost, price}) => {
   return (
@@ -51,6 +52,8 @@ const ProductsCheckout = ({cartItems, shippingCost, price}) => {
           <PriceTotalStyled>{formatPrice(price + shippingCost)}</PriceTotalStyled>
         </TotalStyled>
       </PriceContainerStyled>
+      <MercadoPagoBrick />
+
     </ProductosContainerStyled>
   );
 };
