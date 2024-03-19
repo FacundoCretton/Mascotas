@@ -1,5 +1,4 @@
-import { RiArrowLeftLine, RiArrowRightLine } from "react-icons/ri";
-import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+
 
 
 import styled, { keyframes } from "styled-components";
@@ -8,21 +7,7 @@ export const ImageContainer = styled.div`
   align-items: center;
 `;
 
-export const FlechaIzquierda = styled(FaChevronLeft)`
-  font-size: 24px;
-  cursor: pointer;
-  /* border-radius: 50%;
-  border: 1px solid black; */
-  background: rgba(255, 255, 255, 0.5);
-`;
 
-export const FlechaDerecha = styled(FaChevronRight)`
-  font-size: 24px;
-  cursor: pointer;
-  /* border-radius: 50%;
-  border: 1px solid black; */
-  background: rgba(255, 255, 255, 0.5);
-`;
 
 export const rotateAnimation = keyframes`
   from {
@@ -37,7 +22,7 @@ export const ImgComponent = styled.img`
   max-width: 400px;
   max-height: 400px;
   overflow: hidden;
-  transition: transform 0.5s ease; // Transición suave para la transformación
+  transition: transform 0.5s ease;
   &:before {
     content: "";
     position: absolute;

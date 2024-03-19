@@ -11,6 +11,7 @@ import {
   TextoIntroductorio,
   TextoIntroductorioContainer,
   SpanText,
+  CategoryIcon,
 } from "./CategoriasStyles";
 import { CategoriaContainer, containerVariants } from "../Products/ProductsStyles";
 
@@ -50,7 +51,7 @@ const Categorias = () => {
                 onClick={() => handleSubcategoryClick(subcategory)}
                 className={`subcategory ${selectedSubcategory && subcategory.id === selectedSubcategory.id ? 'selected' : ''}`}
               >
-                {subcategory.name}
+               <CategoryIcon>{subcategory.icon}</CategoryIcon> {subcategory.name}
               </div>
             ))}
         </SubcategoriasContainer>
