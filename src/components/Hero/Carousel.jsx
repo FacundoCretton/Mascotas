@@ -1,4 +1,6 @@
 import Carousel from 'react-bootstrap/Carousel';
+import "bootstrap/dist/css/bootstrap.min.css";
+
 import { Slide1, Slide2, Slide3 } from './Slides/Slide1';
 import { CaptionBackground, StyledCarousel } from './CarouselStyles';
 const Carousell =()=> {

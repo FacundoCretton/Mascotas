@@ -1,17 +1,40 @@
 // Date: 15/02/24 17:36.
-import bone from '../Products/ListProductos/icons/bones.svg'
-import hair1 from '../Products/ListProductos/icons/hair.ico'
-import energy from '../Products/ListProductos/icons/heart.svg'
-import vitalidad from '../Products/ListProductos/icons/veterinary.svg'
+import bone from '../Products/ListProductos/icons/bone.gif'
+import hair1 from '../Products/ListProductos/icons/Gato1.gif'
+import energy from '../Products/ListProductos/icons/heart.gif'
 // import intestinal from '../Products/ListProductos/icons/bowels.svg'
-import stomach from '../Products/ListProductos/icons/stomach.png'
-export const beneficiosIconos = {
-  energia: energy,
-  pelos: hair1,
-  huesos: bone,
-  vitalidad: vitalidad,
-  intestinal: stomach
-};
+import intestinal from '../Products/ListProductos/icons/intestine.gif'
+import taurina from '../Products/ListProductos/icons/bull.gif'
+import saludurinario from '../Products/ListProductos/icons/cystitis.gif'
+import pielsana from '../Products/ListProductos/icons/Perro9.gif'
+import bolasdepelos from '../Products/ListProductos/icons/Gato4.gif'
+import cordero1 from '../Products/ListProductos/icons/oveja.png'
+import piel from '../Products/ListProductos/icons/veterinary.gif'
+import dogplay from '../Products/ListProductos/icons/dogplay.png'
+import preotection from '../Products/ListProductos/icons/protection.gif'
+import vitaminas from '../Products/ListProductos/icons/vitamins.gif'
+import omega3 from '../Products/ListProductos/icons/omega-3.gif'
+import yuca1 from '../Products/ListProductos/icons/yuca.png'
+import beet from '../Products/ListProductos/icons/beet.gif'
+
+
+const energia = { nombre: 'Energia y Vitalidad', icono: energy };
+const peloBrillante = { nombre: 'Pelo Brillante', icono: hair1 };
+const huesosFuertes = { nombre: 'Huesos Fuertes', icono: bone };
+const saludIntestinal = { nombre: 'Salud Intestinal', icono: intestinal };
+const saludUrinario = { nombre: 'Salud del tracto urinario', icono: saludurinario };
+const contieneTaurina = { nombre: 'Taurina', icono: taurina };
+const pielSana = { nombre: 'Piel sana y pelo brillante', icono: pielsana };
+const bolaPelos = { nombre: 'Control de bolas de pelos', icono: bolasdepelos };
+const cordero = { nombre: 'Proteina de Cordero', icono: cordero1 };
+const pielSana1 = { nombre: 'Piel sana', icono: piel };
+const masaMuscular = { nombre: 'Masa Muscular Magra', icono: dogplay };
+const defensas = { nombre: 'Mejora las Defensas', icono: preotection };
+const antioxidantes = { nombre: 'Rico en Antioxidantes', icono: vitaminas };
+const omega = { nombre: 'Con Omega 3 y 6', icono: omega3 };
+const yuca = { nombre: 'Extracto de Yuca', icono: yuca1 };
+const remolacha = { nombre: 'Pulpa de Remolacha', icono: beet };
+
 export const products = [
 
   {
@@ -25,12 +48,7 @@ export const products = [
     img:require('../../Assets/Productos/Alimentos/1.png'),
     imgDorso: require('../../Assets/Productos/Alimentos/1-D.png'),
     stock: true,
-    beneficios: [
-      { nombre: 'Energia y Vitalidad', icono: energy },
-      { nombre: 'Pelo Brillante', icono: hair1 },
-      { nombre: 'Huesos Fuertes', icono: bone },
-      { nombre: 'Salud Intestinal', icono: stomach }
-    ]
+    beneficios: [energia, peloBrillante, huesosFuertes, saludIntestinal]
         
   },
 
@@ -45,6 +63,8 @@ export const products = [
     img:require('../../Assets/Productos/Alimentos/2.png'),
     imgDorso: require('../../Assets/Productos/Alimentos/2-D.png'),
     stock: true,
+    beneficios: [energia, peloBrillante, huesosFuertes, saludIntestinal]
+
 
   },
 
@@ -59,6 +79,7 @@ export const products = [
     img:require('../../Assets/Productos/Alimentos/101.png'),
     imgDorso: require('../../Assets/Productos/Alimentos/101-D.png'),
     stock: true,
+    beneficios: [saludUrinario, contieneTaurina, pielSana, bolaPelos ]
   },
   {
     id: 4,
@@ -71,6 +92,8 @@ export const products = [
     img:require('../../Assets/Productos/Alimentos/3.png'),
     imgDorso: require('../../Assets/Productos/Alimentos/3-D.png'),
     stock: false,
+    beneficios: [energia, peloBrillante, huesosFuertes, saludIntestinal]
+
 
   },
   {
@@ -84,6 +107,8 @@ export const products = [
     img:require('../../Assets/Productos/Alimentos/4.png'),
     imgDorso: require('../../Assets/Productos/Alimentos/4-D.png'),
     stock: false,
+    beneficios: [cordero, pielSana1, masaMuscular]
+
 
 
   },
@@ -98,6 +123,8 @@ export const products = [
     img:require('../../Assets/Productos/Alimentos/5.png'),
     imgDorso: require('../../Assets/Productos/Alimentos/5-D.png'),
     stock: false,
+    beneficios: [cordero, pielSana1, masaMuscular]
+
 
   },
   {
@@ -111,6 +138,8 @@ export const products = [
     img:require('../../Assets/Productos/Alimentos/6.png'),
     imgDorso: require('../../Assets/Productos/Alimentos/6-D.png'),
     stock: false,
+    beneficios: [defensas, peloBrillante, antioxidantes, saludIntestinal ]
+
 
   },
   {
@@ -137,6 +166,8 @@ export const products = [
     img:require('../../Assets/Productos/Alimentos/7.png'),
     imgDorso: require('../../Assets/Productos/Alimentos/7-D.png'),
     stock: false,
+    beneficios: [ peloBrillante, antioxidantes, saludIntestinal ]
+
 
   },
   {
@@ -150,6 +181,8 @@ export const products = [
     img:require('../../Assets/Productos/Alimentos/8.png'),
     imgDorso: require('../../Assets/Productos/Alimentos/8-D.png'),
     stock: true,
+    beneficios: [ omega, yuca, remolacha ]
+
 
   },
 

@@ -87,6 +87,11 @@ export const CategoryIcon = styled.div`
     align-content: center;
     justify-content: center;
     align-items: center;
+
+    & img {
+      width: 23px;
+      height: 23px;
+    }
   `;
 
 export const IconH2 = styled.h2`
@@ -110,7 +115,9 @@ export const CategoryList = styled.div`
 export const ElDivi = styled.div`
 
   /* display: flex; */
-  gap:30px
+  gap:30px;
+
+
 
 `;
 
@@ -143,3 +150,13 @@ font-weight: 800;
 
 
 
+
+
+export const CategoryIcon1 = styled.img`
+
+width: 10px;
+height: 10px;
+
+
+
+`;

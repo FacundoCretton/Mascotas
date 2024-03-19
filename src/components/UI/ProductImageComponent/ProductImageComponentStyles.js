@@ -1,23 +1,26 @@
 import { RiArrowLeftLine, RiArrowRightLine } from "react-icons/ri";
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+
+
 import styled, { keyframes } from "styled-components";
 export const ImageContainer = styled.div`
   display: flex;
   align-items: center;
 `;
 
-export const FlechaIzquierda = styled(RiArrowLeftLine)`
+export const FlechaIzquierda = styled(FaChevronLeft)`
   font-size: 24px;
   cursor: pointer;
-  border-radius: 50%;
-  border: 1px solid black;
+  /* border-radius: 50%;
+  border: 1px solid black; */
   background: rgba(255, 255, 255, 0.5);
 `;
 
-export const FlechaDerecha = styled(RiArrowRightLine)`
+export const FlechaDerecha = styled(FaChevronRight)`
   font-size: 24px;
   cursor: pointer;
-  border-radius: 50%;
-  border: 1px solid black;
+  /* border-radius: 50%;
+  border: 1px solid black; */
   background: rgba(255, 255, 255, 0.5);
 `;
 

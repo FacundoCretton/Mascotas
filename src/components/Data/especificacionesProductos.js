@@ -26,15 +26,29 @@ export const productsSpecifications = {
           calcio: { min: 0.9, max: 1.5 },
           fosforo: { min: 0.7, max: 1.2 }
         },
-        peso: '20kg',
-        marca: 'Advance Bio',
-        raza: 'Todas',
-        tamaño: 'Grande',
-        edad: 'Adultos (Más de 12 meses)',
-        tipo: 'Seco',
-        sabor: 'Premium',
-        ingredientes: 'Carne de cordero, arroz, maíz, etc.',
-        descripcion: 'Acá va un texto de prueba',
+        caracteristicas:{
+          
+          peso: '20kg',
+          marca: 'Advance Bio',
+          raza: 'Todas',
+          tamaño: 'Grande',
+          edad: 'Adultos (Más de 12 meses)',
+          tipo: 'Seco',
+          sabor: 'Premium',
+          ingredientes: 'Carne de cordero, arroz, maíz, etc.',
+          descripcion: 'Acá va un texto de prueba',
+
+        },
+
+        consejos:[
+
+            "Recomendado para perro adulto.",
+            "Formulado especialmente para raza grande.",
+            "Comida seca.",
+            "Sabor: cordero, arroz.",
+            "Sabor y nutrición completa para tu mascota.",
+            "Imágenes ilustrativas. El paquete puede variar según peso."
+        ],
     },
 
     2: {
@@ -69,6 +83,15 @@ export const productsSpecifications = {
         sabor: 'Premium',
         ingredientes: 'Carne de cordero, arroz, maíz, etc.',
         descripcion: 'Acá va un texto de prueba',
+        consejos:[
+
+          "Recomendado para perro adulto.",
+          "Formulado especialmente para raza grande.",
+          "Comida seca.",
+          "Sabor: cordero, arroz.",
+          "Sabor y nutrición completa para tu mascota.",
+          "Imágenes ilustrativas. El paquete puede variar según peso."
+      ],
     },
 
     3: {
@@ -102,6 +125,15 @@ export const productsSpecifications = {
         sabor: 'Pollo y Arroz',
         ingredientes: 'Pollo, arroz, maíz, etc.',
         descripcion: 'Acá va un texto de prueba',
+        consejos:[
+
+          "Recomendado para perro adulto.",
+          "Formulado especialmente para raza grande.",
+          "Comida seca.",
+          "Sabor: cordero, arroz.",
+          "Sabor y nutrición completa para tu mascota.",
+          "Imágenes ilustrativas. El paquete puede variar según peso."
+      ],
     },
     
 
@@ -136,7 +168,16 @@ export const productsSpecifications = {
         tipo: 'Seco',
         sabor: 'Sin especificar',
         ingredientes: 'Ingredientes: Carnes y subproductos animales (pollo 14%, pavo 4%), cereales (maíz 14%, trigo 4%), extractos de proteínas vegetales, aceites y grasas, subproductos de origen vegetal (pulpa de remolacha 2%), verduras (guisantes 4% en los gránulos verdes, zanahorias 0,5% en los gránulos naranjas, espinacas 0,5% en los gránulos verdes), sustancias minerales.',
-        descripcion: 'Acá va un texto de prueba'
+        descripcion: 'Acá va un texto de prueba',
+        consejos:[
+
+          "Recomendado para perro adulto.",
+          "Formulado especialmente para raza grande.",
+          "Comida seca.",
+          "Sabor: cordero, arroz.",
+          "Sabor y nutrición completa para tu mascota.",
+          "Imágenes ilustrativas. El paquete puede variar según peso."
+      ],
     },
 
     5: {
@@ -170,6 +211,15 @@ export const productsSpecifications = {
         sabor: 'Cordero',
         ingredientes: 'Carne de cordero, arroz, maíz, etc.',
         descripcion: 'Acá va un texto de prueba',
+        consejos:[
+
+          "Recomendado para perro adulto.",
+          "Formulado especialmente para raza grande.",
+          "Comida seca.",
+          "Sabor: cordero, arroz.",
+          "Sabor y nutrición completa para tu mascota.",
+          "Imágenes ilustrativas. El paquete puede variar según peso."
+      ],
     },
       
 
@@ -204,7 +254,16 @@ export const productsSpecifications = {
         tipo: 'Seco',
         sabor: 'Cordero',
         ingredientes: 'Carne de cordero, arroz, maíz, etc.',
-        descripcion: 'Acá va un texto de prueba'
+        descripcion: 'Acá va un texto de prueba',
+        consejos:[
+
+          "Recomendado para perro adulto.",
+          "Formulado especialmente para raza grande.",
+          "Comida seca.",
+          "Sabor: cordero, arroz.",
+          "Sabor y nutrición completa para tu mascota.",
+          "Imágenes ilustrativas. El paquete puede variar según peso."
+      ],
     },
       
 
@@ -239,7 +298,16 @@ export const productsSpecifications = {
         tipo: 'Seco',
         sabor: 'Cordero',
         ingredientes: 'Carne de cordero, arroz, maíz, etc.',
-        descripcion: 'Acá va un texto de prueba'
+        descripcion: 'Acá va un texto de prueba',
+        consejos:[
+
+          "Recomendado para perro adulto.",
+          "Formulado especialmente para raza grande.",
+          "Comida seca.",
+          "Sabor: cordero, arroz.",
+          "Sabor y nutrición completa para tu mascota.",
+          "Imágenes ilustrativas. El paquete puede variar según peso."
+      ],
     },
       
 
@@ -274,7 +342,16 @@ export const productsSpecifications = {
         tipo: 'Seco',
         sabor: 'Salmón',
         ingredientes: 'Salmón, arroz, maíz, etc.',
-        descripcion: 'Acá va un texto de prueba'
+        descripcion: 'Acá va un texto de prueba',
+        consejos:[
+
+          "Recomendado para perro adulto.",
+          "Formulado especialmente para raza grande.",
+          "Comida seca.",
+          "Sabor: cordero, arroz.",
+          "Sabor y nutrición completa para tu mascota.",
+          "Imágenes ilustrativas. El paquete puede variar según peso."
+      ],
     },
       
 
@@ -302,15 +379,28 @@ export const productsSpecifications = {
           "Calcio": { min: 0.7, max: 1.2 },
           "Fósforo": { min: 0.9, max: 1.0 }
         },
-        peso: '15kg',
-        marca: 'Advance Bio',
-        raza: 'Todas',
-        tamaño: 'Pequeño',
-        edad: 'Cachorros (Hasta 12 meses)',
-        tipo: 'Seco',
-        sabor: '-',
-        ingredientes: '-',
-        descripcion: 'Perros que en edad adulta van a tener un peso de +40 kg'
+        caracteristicas:{
+          "peso": '15kg',
+          "marca": 'Advance Bio',
+          "raza": 'Todas',
+          "tamaño": 'Pequeño',
+          "edad": 'Cachorros (Hasta 12 meses)',
+          "tipo": 'Seco',
+          "sabor": '-',
+          "ingredientes": '-',
+
+        },
+        
+        descripcion: 'Perros que en edad adulta van a tener un peso de +40 kg',
+        consejos:[
+
+          "Recomendado para perro adulto.",
+          "Formulado especialmente para raza grande.",
+          "Comida seca.",
+          "Sabor: cordero, arroz.",
+          "Sabor y nutrición completa para tu mascota.",
+          "Imágenes ilustrativas. El paquete puede variar según peso."
+      ],
       },
 
     10:{
@@ -342,13 +432,31 @@ export const productsSpecifications = {
         tipo: 'Seco',
         sabor: '-',
         ingredientes: 'Ingredientes de alta calidad específicamente formulados para el control de peso y la salud general del perro.',
-        descripcion: 'Control de peso'
+        descripcion: 'Control de peso',
+        consejos:[
+
+          "Recomendado para perro adulto.",
+          "Formulado especialmente para raza grande.",
+          "Comida seca.",
+          "Sabor: cordero, arroz.",
+          "Sabor y nutrición completa para tu mascota.",
+          "Imágenes ilustrativas. El paquete puede variar según peso."
+      ],
       },
 
     11:{
         material: 'Goma',
         tamaño: 'Grande',
         descripcion: 'Acà va un texto de prueba',
+        consejos:[
+
+          "Recomendado para perro adulto.",
+          "Formulado especialmente para raza grande.",
+          "Comida seca.",
+          "Sabor: cordero, arroz.",
+          "Sabor y nutrición completa para tu mascota.",
+          "Imágenes ilustrativas. El paquete puede variar según peso."
+      ],
     },
 
 }

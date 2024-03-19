@@ -1,11 +1,12 @@
 // data.js
-import { FaListUl, FaDog, FaCat } from "react-icons/fa";
+import { FaDog, FaCat } from "react-icons/fa";
+import pets from '../../Assets/pets.png';
 
 export const Categories = [
   {
     id: 1,
     name: 'Todos',
-    icon: <FaListUl/>,
+    icon: <img src={pets} alt="Pets" />,
     category: 'Todos',
     subcategories: 
     [

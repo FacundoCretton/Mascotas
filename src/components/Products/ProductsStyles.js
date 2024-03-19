@@ -39,16 +39,6 @@ export const ButtonContainer = styled.div`
 
 
 
-export const ContainerPrice = styled.div`
-  display: flex;
-  justify-content: space-around;
-`;
-
-export const CardPrice = styled.span`
-  font-weight: 800;
-  font-size: 1.5rem;
-  color: #4caf50; /* Verde que complementa el diseño de la página */
-`;
 
 
 

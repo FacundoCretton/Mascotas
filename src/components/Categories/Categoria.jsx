@@ -23,7 +23,8 @@ export const Categoria = ({ name, category, icon }) => {
       onClick={handleCategoryClick}
     >
       <ElDivi>
-      {icon}
+        
+      <CategoryIcon>{icon}</CategoryIcon>
 
       <CategoryIcon>
         <IconH2>{name}</IconH2>
